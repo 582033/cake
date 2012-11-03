@@ -98,48 +98,7 @@ function submitData1() {
 <body>
 	<div class="main950">
     	<!--头部开始-->
-       <div class="aiju_header">
-            <div class="loginbar">
-            	<ul class="aiju_login left" id="logining"></ul>
-                <ul class="aiju_login right aiju_login_r">
-                    <li><a href="javascript:void(0);" class="shangpin_mc" onclick="addcollectnum();">收藏本站</a></li>
-                    <li class="gsdh_tel">400-898-5559</li>
-                </ul>
-            </div>
-           
-            <!--<div class="head_banner"></div>-->
-            <div class="aiju_menu">
-            	<div class="aiju_menu_logo"><a href="http://www.aiju.com/"><img src="http://img.sys.aiju.com//shop2011/9.26aijulogo.jpg" width="217" height="60" /></a></div>
-                <div class="aiju_menu_zhanwei"><img src="http://img.sys.aiju.com//shop2011/zhanwei.jpg" width="170" height="102" /></div>
-                <div class="aiju_menu_sousuo">
-				<form action="http://shop.aiju.com/shop_search.php" method="post" name="sreachdata" id="sreachdata">
-					<input type="hidden" value="product" name="type" />
-                    <ul class="sousuo_biaoq">
-                        <li><a href="javascript:void(0);"  class="dangqian_bq"  id="product" onclick="inputvalue('product');" onfocus="this.blur()">商品</a></li>
-                    </ul>
-                    <div class="aiju_menu_box" id="cssbox">
-                        <div class="aiju_menu_boxmiddle left"><input type="text" value="" name="keyword"  class="sousuo_gjz"/></div>
-                        <div class="aiju_menu_boxright left"><input type="button" value="" name="" class="sousuo_button" onclick="submitData1();" /></div>
-                    </div>
-				</form>
-                    <ul class="renmen_sousuo">
-                    	<li>热门搜索：</li>
-						<li><a href="#" target="_blank">史密斯</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--导航条开始-->
-            <div class="dht">
-            	<ul>
-                	<li class="dht_1"><a href="http://www.aiju.com/" class="dht_link">首页</a></li>
-
-                    <li class="dht_4"><a href="http://shop.aiju.com/" class="dht_link1">建材</a></li>
-
-                </ul>
-            </div>
-            <!--导航条结束-->
-        </div>
-
+		{dede:include filename="header.htm"/}
         <!--头部结束-->
         <!--内容开始-->
         <div class="aiju_content">
@@ -256,56 +215,7 @@ $(function() {
 	$("#trigger1").powerFloat();
 });
 </script>
-        <!--底部信息开始-->
-        <!--<div class="footer">
-        	<!--支付开始-->
-        	 <!--<div class="xinshouzn">
-            	<div class="xinshouzn_left"><img src="http://img.sys.aiju.com//shop2011/friendlink_left.jpg" width="11" height="151" /></div>
-                <div class="xinshouzn_middle">
-                	<ul>
-                    	<li class="xinshouzhinan">新手指南</li>
-                    </ul>
-                    <ul>
-                    	<li class="xinshouzhinan">支付方式</li>
-                    </ul>
-                    <ul style="width:190px; padding-top:25px;">
-                    	<li><img src="http://img.sys.aiju.com//shop2011/wsjyaq.jpg" width="190" height="78" /></li>
-                    </ul>
-                    <ul>
-                    	<li class="xinshouzhinan">配送方式</li>
-                    </ul>
-                    <ul>
-                    	<li class="xinshouzhinan">售后服务</li>
-                    </ul>
-                </div>
-                <div class="xinshouzn_left"><img src="http://img.sys.aiju.com//shop2011/friendlink_right.jpg" width="11" height="151" /></div>
-            </div> -->
-            <!--支付结束-->
-            <!--联系我们-->
-            <div class="lianxiwomen">
-            	<ul class="lianxiwomen_list">
-                	<li><a href="http://www.aiju.com/help/wangzjj.shtml" class="shangpin_mc">关于我们</a></li>
-                    <li>|</li>
-                    <li><a href="http://shop.aiju.com/sitemap_new.php" class="shangpin_mc">网站地图</a></li>
-                    <li>|</li>
-                    <li><a href="http://www.aiju.com/help/zhaoshz.shtml" class="shangpin_mc">招商合作</a></li>
-                    <li>|</li>
-                    <li><a href="http://www.aiju.com/help/lianxwm.shtml" class="shangpin_mc">联系我们</a></li>
-                     <li>|</li>
-                    <li><a href="http://www.aiju.com/link.php" class="shangpin_mc">友情链接</a></li>
-                    <li>|</li>
-                    <li><a href="http://www.aiju.com/help/" class="shangpin_mc">帮助中心</a></li>
-					<li>|</li>
-                    <li><a href="http://www.aiju.com/help/zhaopin.shtml" class="shangpin_mc">诚聘英才</a></li>
-                </ul>
-                <p>公司地址：北京市西城区北三环中路29号院3号楼茅台大厦7层</p>
-                <p>公司电话：010-82092068     传真：010-82092092      邮编：100029 </p>
-                <p>Copyright@2009 版权所有 AIJU.COM 京ICP备09007511号 广告经营许可证：3301061000468 </p>
-                <p>咨询热线：<img src="http://img.sys.aiju.com//shop2011/aiju_tel.jpg" width="171" height="26"  align="absmiddle"/>(仅限北京用户)</p>
-            </div>
-            <!--联系我们结束-->
-        </div>
-        <!--底部信息结束-->
+		{dede:include filename="footer.htm"/}
     </div>
     </div>
 </body>
