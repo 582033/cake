@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*底部信息开始*/
+.footer{
+	width:950px;
+	clear:both;
+	padding-bottom:10px;
+}
+
+/*支付开始*/
+.footer .xinshouzn{
+	width:950px;
+	height:151px;
+	overflow:hidden;
+	zoom:1;
+}
+.footer .xinshouzn .xinshouzn_left{
+	float:left;
+	width:11px;
+	height:151px;
+}
+.footer .xinshouzn .xinshouzn_middle{
+	width:928px;
+	height:151px;
+	float:left;
+	overflow:hidden;
+	zoom:1;
+}
+.footer .xinshouzn .xinshouzn_middle ul{
+	float:left;
+	margin:15px;
+	margin-left:20px;
+	_margin-left:15px;
+	width:140px;
+/*	height:160px;*/
+}
+.xinshouzn_middle .xinshouzhinan{
+	font-size:14px;
+	font-family:"微软雅黑";
+	font-weight:bold;
+	height:27px;
+	line-height:27px;
+	padding-left:35px;
+}
+.xinshouzn_middle .gouwuliuc{
+	height:27px;
+	padding-left:43px;
+}
+/*支付结束*/
+/*合作伙伴开始*/
+.hezuohuoban{
+	width:948px;
+	padding-bottom:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.hezuohuoban .hezuohuoban_cetent{
+	width:934px;
+	margin-top:7px;
+	padding-bottom:10px;
+}
+.hezuohuoban .hezuohuoban_cetent .partner{
+	width:910px;
+	height:65px;
+}
+.hezuohuoban .hezuohuoban_cetent .partner ul li{
+	float:left;
+	padding-top:10px;
+}
+.hezuohuoban .hezuohuoban_cetent .partner ul li a{
+	display:block;
+	float:left;
+	padding-top:11px;
+}
+.aiju_friendlink{
+	clear:both;
+	width:910px;
+
+}
+.aiju_friendlink li{
+	float:left;
+	white-space:nowrap;
+	padding:5px 3px 0px 3px;
+}
+/*合作伙伴结束*/
+/*联系我们开始*/
+.lianxiwomen{
+	width:950px;
+	border-top:2px #e6e6e6 solid;
+	text-align:center;
+	line-height:200%;
+}
+.lianxiwomen_list{
+	width:640px;
+}
+.lianxiwomen_list li{
+	float:left;
+	padding:12px 10px 0px 10px;
+}
+.lianxiwomen p{
+	clear:both;
+}
+/*联系我们结束*/
+
+/*底部信息结束*/
+.aiju_submenu{
+	width:910px;
+	clear:both;
+	height:25px;
+	border-top:1px #e9e9e9 solid;
+	padding-top:13px;
+	margin-top:10px;
+}
+.aiju_submenu li{
+	float:left;
+	height:25px;
+	line-height:25px;
+	margin:0 3px 0 3px;
+}
+.aiju_submenu_or{
+	margin-left:9px;
+	margin-right:4px;
+}
+.aiju_submenu_gr2{
+	margin-right:9px;
+}
+a.aiju_submenu_gr2:link,
+a.aiju_submenu_gr2:visited{
+	color:#939393;
+	text-decoration:none;
+}
+a.aiju_submenu_gr2:hover,
+a.aiju_submenu_gr2:active{
+	color:#eb5c11;
+	text-decoration:none;
+}

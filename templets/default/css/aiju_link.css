@@ -1,0 +1,310 @@
+@charset "utf-8";
+/* CSS Document */
+a.shangpin_mc:link,
+a.shangpin_mc:visited{
+	color:#333333;
+	text-decoration:none;
+}
+a.shangpin_mc:hover,
+a.shangpin_mc:active{
+	color:#ec621a;
+	text-decoration:underline;
+}
+a.qgzq_mingc:link,
+a.qgzq_mingc:visited{
+	color:#000;
+	text-decoration:none;
+}
+a.qgzq_mingc:hover,
+a.qgzq_mingc:active{
+	color:#ff0103;
+	text-decoration:underline;
+}
+.lanmu1_menu li a:link,
+.lanmu1_menu li a:visited{
+	color:#939393;
+	text-decoration:none;
+}
+.lanmu1_menu li a:hover,
+.lanmu1_menu li a:active{
+	color:#ec621a;
+	text-decoration:underline;
+}
+.lanmu1 .lanmu1_top .lanmu1_menu{
+	color:#939393;
+}
+
+.gouwuliuc a:link,
+.gouwuliuc a:visited{
+	color:#939393;
+	text-decoration:none;
+}
+.gouwuliuc a:hover,
+.gouwuliuc a:active{
+	color:#ec621a;
+	text-decoration:underline;
+}
+.aiju_friendlink li a:link,
+.aiju_friendlink li a:visited{
+	color:#939393;
+	text-decoration:none;
+}
+.aiju_friendlink li a:hover,
+.aiju_friendlink li a:active{
+	color:#000;
+	text-decoration:underline;
+}
+.loginzhuce .zhuce_button a:link,
+.loginzhuce .zhuce_button a:visited{
+	background:url(http://img.sys.aiju.com/shop2011/zhuce1.jpg) no-repeat;
+	text-decoration:none;
+}
+.loginzhuce .zhuce_button a:hover,
+.loginzhuce .zhuce_button a:active{
+	background:url(http://img.sys.aiju.com/shop2011/zhuce.jpg) no-repeat;
+	text-decoration:none;
+}
+.loginzhuce .denglu_button a:link,
+.loginzhuce .denglu_button a:visited{
+	background:url(http://img.sys.aiju.com/shop2011/denglu1.jpg) no-repeat;
+	text-decoration:none;
+}
+.loginzhuce .denglu_button a:hover,
+.loginzhuce .denglu_button a:active{
+	background:url(http://img.sys.aiju.com/shop2011/denglu.jpg) no-repeat;
+	text-decoration:none;
+}
+
+.zhuangxiu_1f_top ul li a:link,
+.zhuangxiu_1f_top ul li a:visited{
+	color:#939393;
+	text-decoration:none;
+}
+.zhuangxiu_1f_top ul li a:hover,
+.zhuangxiu_1f_top ul li a:active{
+	color:#ec621a;
+	text-decoration:underline;
+}
+a.zhuangxjc:link,
+a.zhuangxjc:visited{
+	color:#343530;
+	text-decoration:none;
+}
+a.zhuangxjc:hover,
+a.zhuangxjc:active{
+	color:#343530;
+	text-decoration:underline;
+}
+.youhuiquan .youhuiquan_middle .youhui_top a:link,
+.youhuiquan .youhuiquan_middle .youhui_top a:visited{
+	color:#333;
+	text-decoration:none;
+}
+.youhuiquan .youhuiquan_middle .youhui_top a:hover,
+.youhuiquan .youhuiquan_middle .youhui_top a:active{
+	color:#333;
+	text-decoration:none;
+}
+.lt_mroe{
+	color:#0a3576;
+}
+
+a.wenba_list_or:link,
+a.wenba_list_or:visited{
+	color:#ec621a;
+	text-decoration:none;
+}
+a.wenba_list_or:hover,
+a.wenba_list_or:active{
+	color:#ec621a;
+	text-decoration:underline;
+}
+a.aiju_submenu_or:link,
+a.aiju_submenu_or:visited{
+	color:#eb5c11;
+	font-weight:bold;
+	text-decoration:none;
+}
+a.aiju_submenu_or:hover,
+a.aiju_submenu_or:active{
+	color:#eb5c11;
+	font-weight:bold;
+	text-decoration:underline;
+}
+a.aiju_submenu_gr:link,
+a.aiju_submenu_gr:visited{
+	color:#333;
+	text-decoration:none;
+}
+a.aiju_submenu_gr:hover,
+a.aiju_submenu_gr:active{
+	color:#333;
+	text-decoration:underline;
+}
+a.menu_link1:link,
+a.menu_link1:visited{
+	background:url(http://img.sys.aiju.com/shop2011/head_link_bj1.jpg) no-repeat;
+	color:#fff;
+	text-decoration:none;
+}
+a.menu_link1:hover,
+a.menu_link1:active{
+	background:url(http://img.sys.aiju.com/shop2011/head_link_bj1.jpg) no-repeat;
+	color:#fff;
+	text-decoration:none;
+}
+a.menu_link:link,
+a.menu_link:visited{
+	background:url(http://img.sys.aiju.com/shop2011/head_link_bj.jpg) no-repeat;
+	color:#ec5e10;
+	text-decoration:none;
+}
+a.menu_link:hover,
+a.menu_link:active{
+	background:url(http://img.sys.aiju.com/shop2011/head_link_bj.jpg) no-repeat;
+	color:#ec5e10;
+	text-decoration:none;
+}
+a.wodedd:link,
+a.wodedd:visited{
+	color:#32599f;
+	text-decoration:none;
+}
+a.wodedd:hover,
+a.wodedd:active{
+	color:#32599f;
+	text-decoration: underline;
+}
+.shanchu
+{
+	color:#055791;
+	text-decoration:underline;
+}
+a.black_blue:link,
+a.black_blue:visited{
+	color:#333;
+	text-decoration:none;
+}
+a.black_blue:hover,
+a.black_blue:active{
+	color:#1b5790;
+	text-decoration:underline;
+} 
+a.oranger_link:link,
+a.oranger_link:visited{
+	color:#eb5c11;
+	text-decoration:none;
+}
+a.oranger_link:hover,
+a.oranger_link:active{
+	color:#eb5c11;
+	text-decoration: underline;
+}
+a.quanbu:link,
+a.quanbu:visited{
+	color:#fff;
+	background-color:#eb5c11;
+	text-decoration:none;
+}
+a.quanbu:hover,
+a.quanbu:active{
+	color:#fff;
+	background-color:#eb5c11;
+	text-decoration:none;
+}
+a.quanbu_1:link,
+a.quanbu_1:visited{
+	color:#333;
+	text-decoration:none;
+}
+a.quanbu_1:hover,
+a.quanbu_1:active{
+	color:#333;
+	text-decoration: underline;
+}
+a.sc_next{
+	display:block;
+	width:54px;
+	height:20px;
+	color:#ec5e14;
+	line-height:22px;
+	text-decoration:none;
+	border:1px #ccc solid;
+	text-align:center;
+}
+a.oranger_link2:link,
+a.oranger_link2:visited{
+	color:#ff3600;
+	text-decoration:none;
+}
+a.oranger_link2:hover,
+a.oranger_link2:active{
+	color:#ff3600;
+	text-decoration: underline;
+}
+a.or_bl_xq:link,
+a.or_bl_xq:visited{
+	color:#eb5e14;
+	text-decoration:none;
+}
+a.or_bl_xq:hover,
+a.or_bl_xq:active{
+	color:#1b5790;
+	text-decoration:underline;
+}
+.red_link{
+	color:#d21616;
+	font-size:14px;
+	text-decoration:none;
+}
+a.green_link:link,
+a.green_link:visited{
+	color:#708800;
+	text-decoration:none;
+}
+a.green_link:hover,
+a.green_link:active{
+	color:#708800;
+	text-decoration: underline;
+}
+a.blueb_link:link,
+a.blueb_link:visited{
+	color:#018d84;
+	text-decoration:none;
+}
+a.blueb_link:hover,
+a.blueb_link:active{
+	color:#018d84;
+	text-decoration: underline;
+}
+a.or_link:link,
+a.or_link:visited{
+	color:#ee6119;
+	text-decoration:none;
+}
+a.or_link:hover,
+a.or_link:active{
+	color:#ee6119;
+	text-decoration: underline;
+}
+a.yl_link:link,
+a.yl_link:visited{
+	color:#ec621a;
+	text-decoration:none;
+}
+a.yl_link:hover,
+a.yl_link:active{
+	color:#ec621a;
+	text-decoration: underline;
+}
+a.withe_link:link,
+a.withe_link:visited{
+	color:#fff;
+	text-decoration:none;
+}
+a.withe_link:hover,
+a.withe_link:active{
+	color:#fff;
+	text-decoration:none;
+}
+

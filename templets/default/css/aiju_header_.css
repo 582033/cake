@@ -1,0 +1,374 @@
+@charset "utf-8";
+/* CSS Document */
+
+.aiju_header{
+	width:950px;
+/*	height:183px;*/
+position:relative;
+top:0;
+}
+.aiju_header .aiju_submenu{
+	width:950px;
+	height:25px;
+}
+.aiju_header .aiju_submenu li{
+	float:left;
+	height:25px;
+	line-height:25px;
+	margin:0 3px 0 3px;
+}
+.aiju_submenu .aiju_submenu_or{
+	margin-left:9px;
+	margin-right:4px;
+}
+.aiju_submenu .aiju_submenu_gr{
+	margin-right:9px;
+}
+.aiju_header .head_banner{
+	width:950px;
+	height:40px;
+}
+.aiju_header .loginbar{
+	height:25px;
+	width:950px;
+/*	background:url(../images/head_bj1.jpg) repeat-x;*/
+}
+.aiju_header .loginbar ul{
+	height:25px;
+	line-height:25px;
+
+}
+.loginbar .aiju_login{
+	padding-left:8px;
+}
+.loginbar .aiju_login li{
+	float:left;
+	padding:0 3px 0 3px;
+}
+
+.loginbar .aiju_login_r li{
+	padding:0 8px 0 8px;
+}
+.loginbar .aiju_login_r .gsdh_tel{
+	background:url(http://img.sys.aiju.com/shop2011/9.26tel_pic.jpg) no-repeat 5px 3px;
+	color:#d74e03;
+	font-weight:bold;
+	padding-left:25px;
+}
+.aiju_menu{
+	width:950px;
+	height:102px;
+	overflow:hidden;
+	zoom:1;
+}
+
+.aiju_menu_logo{
+	float:left;
+	width:217px;
+	height:60px;
+	padding:20px 0 0 12px;
+}
+/*新搜索改开始*/
+.aiju_menu_sousuo{
+	width:539px;
+	float:right;
+	padding-top:30px;
+	position:relative;
+	top:0;
+}
+/*背景样式1*/
+.aiju_menu_box{
+	width:539px;
+	height:43px;
+	background:url(http://img.sys.aiju.com/shop2011//new_ss_bj1_bj.jpg) no-repeat left;
+	overflow:hidden;
+	zoom:1;
+}
+/*背景样式2*/
+.aiju_menu_box2{
+	width:539px;
+	height:43px;
+	background:url(http://img.sys.aiju.com/shop2011/new_ss_bj2_bj.jpg) no-repeat left;
+	overflow:hidden;
+	zoom:1;
+}
+.aiju_menu_boxleft{
+	width:10px;
+	height:45px;
+}
+.aiju_menu_boxmiddle{
+	width:415px;
+	height:45px;
+	_margin-top:-5px;
+	+margin-top:-5px;
+}
+.sousuo_gjz{
+	margin-top:12px;
+	margin-left:15px;
+	height:18px;
+	border:none;
+	width:410px;
+	font-size:14px;
+	_border:1px #fff solid;
+	_height:16px;
+	+border:1px #fff solid;
+	+height:16px;
+}
+.aiju_menu_boxright{
+	width:110px;
+	height:43px;
+}
+.sousuo_button{
+	background:url(http://img.sys.aiju.com/shop2011/new_ss_button.jpg) no-repeat;
+	border:none;
+	width:110px;
+	height:43px;
+	cursor:pointer;
+}
+.sousuo_biaoq{
+	height:24px;
+	width:530px;
+	position:absolute;
+	top:8px;
+}
+
+.sousuo_biaoq li{
+	float:left;
+	width:66px;
+	height:24px;
+}
+.sousuo_biaoq li a{
+	float:left;
+	display:block;
+	line-height:24px;
+	text-align:center;
+	text-decoration:none;
+}
+/*代金券当前样式*/
+.dangqian_bq{
+	background:url(http://img.sys.aiju.com/shop2011/new_ss_bj1.jpg) no-repeat;
+	width:65px;
+	height:23px;
+	color:#EB5C11;
+	font-weight:bold;
+	padding-left:6px;
+}
+/*代金券默认样式*/
+.dangqian_bq_mr{
+	width:65px;
+	height:23px;
+	padding-left:6px;
+}
+a.dangqian_bq_mr:link,
+a.dangqian_bq_mr:visited{
+	color:#333;
+}
+a.dangqian_bq_mr:hover,
+a.dangqian_bq_mr:active{
+	color:#EB5C11;
+}
+/*商品当前样式*/
+.qita_bq{
+	width:66px;
+	height:23px;
+	text-align:center;
+	font-weight:bold;
+	background:url(http://img.sys.aiju.com/shop2011/new_ss_bj2.jpg) no-repeat;
+	color:#EB5C11;
+}
+/*商品默认样式*/
+.qita_bq_mr{
+	width:66px;
+	height:23px;
+	text-align:center;
+}
+a.qita_bq_mr:link,
+a.qita_bq_mr:visited{
+	color:#333;
+}
+a.qita_bq_mr:hover,
+a.qita_bq_mr:active{
+	color:#EB5C11;
+}
+
+.renmen_sousuo{
+	padding-left:6px;
+}
+/*新搜索改结束*/
+.renmen_sousuo li{
+	color:#666;
+	float:left;
+}
+.renmen_sousuo li a{
+	margin-right:15px;
+}
+.renmen_sousuo li a:link,
+.renmen_sousuo li a:visited{
+	color:#666;
+	text-decoration:none;
+}
+.renmen_sousuo li a:hover,
+.renmen_sousuo li a:active{
+	color:#eb5c11;
+	text-decoration:none;
+}
+.dht{
+	width:950px;
+	height:34px;
+	font-size:14px;
+	font-weight:bold;
+	position:relative;
+	top:0;
+	background:url(http://img.sys.aiju.com/shop2011/dht_menubj.jpg) no-repeat;
+}
+.dht ul li{
+	float:left;
+}
+.dht ul li a{
+	display:block;
+	float:left;
+	width:58px;
+	height:33px;
+	text-decoration:none;
+	line-height:34px;
+	text-align:center;
+}
+.dht_link{
+	background:url(http://img.sys.aiju.com/shop2011/menu_bj_jt.jpg) no-repeat;
+	color:#fff116;
+}
+a.dht_link1:link,
+a.dht_link1:visited{
+	color:#fff;
+}
+a.dht_link1:hover,
+a.dht_link1:active{
+	color:#fff116;
+}
+.dht .dht_1{
+	width:93px;
+	height:33px;
+	margin-left:25px;
+	_margin-left:15px;
+}
+.dht .dht_2{
+	padding:0 10px 0 5px;
+}
+.dht .dht_4{
+	padding:0 36px 0 10px;
+}
+.dht .dht_3{
+	width:90px;
+	height:33px;
+}
+.dht .dht_6{
+	width:105px;
+	height:33px;
+}
+.dht .dht_5{
+	padding:0 0px 0 5px;
+}
+.hot_pic{
+position:absolute;
+width:26px;
+height:14px;
+top:-10px;
+left:272px;
+}
+
+/*下拉样式开始*/
+.xiala_menu{
+	position:absolute;
+	top:-8px;
+	left:500px;
+	z-index:10;
+	_top:-2px;
+/*	+left:735px;*/
+}
+.list_xiala a{
+	float:left;
+	width:75px;
+	padding:3px 0px 0px 8px;
+}
+.list_xiala a:link{
+color:#999999;
+text-decoration:none;
+/*float:left;
+width:76px;
+padding:3px 0px 5px 0px;
+text-align:center;*/
+}
+.list_xiala a:visited{
+color:#999999;
+text-decoration:none;
+/*float:left;
+padding:3px 0px 5px 0px;
+width:76px;*/
+}
+.list_xiala a:hover{
+color:#FF671E;
+/*float:left;
+padding:3px 0px 5px 0px;
+width:76px;*/
+text-decoration:none;
+/*background-color:#539D26;*/
+text-decoration:underline;
+}
+.list_xiala a:active{
+color:#FF671E;
+/*float:left;
+padding:3px 0px 5px 0px;
+width:76px;*/
+text-decoration:none;
+background-color:#EEEEEE;
+text-decoration:underline;
+}
+/*#nav{
+	width:600px;
+	height:30px;
+	border-bottom:0px;
+	padding:0px 5px;
+	position:absolute;
+	z-index:1;
+	left: 198px;
+	top: 25px;
+}*/
+.list_xiala{
+line-height:20px;
+text-align:left;
+/*padding:4px;*/
+font-weight:normal;
+}
+.menu1{
+width:85px;
+height:auto;
+margin:6px 4px 0px 0px;
+border:1px solid #999999;
+background-color:#fff;
+color:#333;
+padding:2px 0px 0px 0px;
+cursor:hand;
+overflow-y:hidden;
+/*filter:Alpha(opacity=70);
+-moz-opacity:0.7;*/
+text-align:center;
+}
+.menu2{
+width:85px;
+height:12px;
+margin:6px 4px 0px 0px;
+background-color:none;
+color:#333;
+border:none;
+padding:2px 0px 10px 0px;
+_padding:2px 0px 8px 0px;
+overflow-y:hidden;
+cursor:hand;
+text-align:center;
+}
+/*下拉样式结束*/
+.aiju_menu_zhanwei{
+	width:170px;
+	height:102px;
+	float:left;
+}
