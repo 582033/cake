@@ -7,63 +7,11 @@
 <meta name="keywords" content="{dede:global.cfg_keywords/}" />
 <link href="{dede:global.cfg_templets_skin/}/css/aiju_aj_index1.css" type="text/css" rel="stylesheet" />
 <script src="{dede:global.cfg_templets_skin/}/js/jquery.js" type="text/javascript"></script>
-<script src="{dede:global.cfg_templets_skin/}/js/jquery.d.imagechange.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.KinSlideshow-1.2.1.min.js"></script>
 <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/UrlUnit.js"></script>
-<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js//simpleCart.js"></script>
-<style type="text/css">
-        #qqonline{
-            position:absolute;
-            top:300px;
-            left:0px;
-            width:72px;
-            height:77px;
-        }
-	
-    </style>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/simpleCart.js"></script>
 </head>
 
-<script type="text/javascript">
-	$(window).scroll(function() {    // 页面发生scroll事件时触发
-		var bodyTop = 0;
-		if (typeof window.pageYOffset != 'undefined') {
-			bodyTop = window.pageYOffset;
-		}
-		 else if (typeof document.compatMode != 'undefined' && document.compatMode != 'BackCompat')
-		 {
-			bodyTop = document.documentElement.scrollTop;
-		}
-		else if (typeof document.body != 'undefined') {
-			bodyTop = document.body.scrollTop;
-		}
-
-		$("#qqonline").css("top", 300 + bodyTop);
-	});
-</script>
-
-<script language="javascript">
-$(document).ready(function() {
-function inputvalue(value){
-	if(value == "ticket") {
-		document.getElementById(value).className ="dangqian_bq";
-		document.getElementById('product').className ="qita_bq_mr";
-		document.getElementById('brandshop').className ="qita_bq_mr";
-		
-		document.getElementById('cssbox').className ="aiju_menu_box";
-	}else if(value == "product") {
-		//document.getElementById('ticket').className ="dangqian_bq_mr";
-		document.getElementById(value).className ="qita_bq";
-		document.getElementById('brandshop').className ="qita_bq_mr";
-		
-		document.getElementById('cssbox').className ="aiju_menu_box2";
-	}else if(value == "brandshop") {
-		//document.getElementById('ticket').className ="dangqian_bq_mr";
-		document.getElementById('product').className ="qita_bq_mr";
-		document.getElementById(value).className ="qita_bq";
-		document.getElementById('cssbox').className ="aiju_menu_box2";
-	}
-	document.sreachdata.type.value=value;
-}
-</script>
 <script language="javascript">
 //去左右空格
 function trim(s){
@@ -123,33 +71,36 @@ function submitData1() {
                     	<!--轮播开始-->
                     	<div class="aiju_lunbo">
 							<div id="taobaoSlide" style="visibility:hidden;">
-        <a href=http://www.ygy.com.cn/zhuanti/120915.html target=_blank><img src=http://ad.aiju.com/Upfiles/d2832524218995690d5b82e4b3e44253.jpg width=492 height=270 alt='亚光亚全案小区发布会 组织来团购吧' id='guanggao556'></a>        <a href=http://www.ygy.com.cn/decorate_5s.php target=_blank><img src=http://ad.aiju.com/Upfiles/b674b6244b95aaf13f692f6ea0d53802.jpg width=492 height=270 alt='恶意增项我买单 5S成品家装引领“二次产业革命”亚光亚装饰' id='guanggao788'></a>        <a href=http://www.ygy.com.cn/com_news_info.php?id=8984 target=_blank><img src=http://ad.aiju.com/Upfiles/2a7f7e1c1668d2a426ae5f95cf520228.jpg width=492 height=270 alt='亚光亚装饰 关爱家人 尽享环保之家' id='guanggao789'></a>        <a href=http://shop.aiju.com/ target=_blank><img src=http://ad.aiju.com/Upfiles/64f0a4ec5b8862250ebf0f056bc3d517.jpg width=492 height=270 alt='万种商品37折起' id='guanggao555'></a>        <a href=http://pinpai.aiju.com/ target=_blank><img src=http://ad.aiju.com/Upfiles/96cc708adaea013b8251fb398019eb72.jpg width=492 height=270 alt='2012品牌京城首发' id='guanggao787'></a>    </div>
-                        </div>
-						<script type="text/javascript">
-$(function(){
-	$("#taobaoSlide").KinSlideshow({
-			moveStyle:"down", // 移动方式(down/up/left/right)
-			intervalTime:5, // 间隔时间(秒)
-			mouseEvent:"mouseover",
-			isHasTitleBar:false, // 是否显示标题条
-			isHasTitleFont:false, // 是否显示标题文字
-			isHasBtn:true, // 是否显示按钮
-			btn:{
-				btn_bgColor:"#666666", // 按钮背景色
-				btn_bgHoverColor:"#ff6701", // 被选中时按钮的背景色
+								<a href='#' target='_blank'><img src='http://ad.aiju.com/Upfiles/d2832524218995690d5b82e4b3e44253.jpg' width='492' height='270'></a> 
+								<a href='#' target='_blank'><img src='http://ad.aiju.com/Upfiles/d2832524218995690d5b82e4b3e44253.jpg' width='492' height='270'></a> 
+							</div>
 
-				btn_fontColor:"#CCCCCC", // 按钮文字的颜色
+						</div>
+				<script type="text/javascript"> 
+					$(document).ready(function(){
+						$('#taobaoSlide').KinSlideshow({
+							moveStyle:"down", // 移动方式(down/up/left/right)
+							intervalTime:5, // 间隔时间(秒)
+							mouseEvent:"mouseover",
+							isHasTitleBar:false, // 是否显示标题条
+							isHasTitleFont:false, // 是否显示标题文字
+							isHasBtn:true, // 是否显示按钮
+							btn:{
+								btn_bgColor:"#666666", // 按钮背景色
+								btn_bgHoverColor:"#ff6701", // 被选中时按钮的背景色
 
-				btn_borderColor:"#999999", // 按钮边框背景色
-				btn_borderHoverColor:"#ff6701" // 被选中时按钮边框的背景色
-			}, // 按钮的样式
-			titleFont:{
-				TitleFont_size:14, // 标题文字的大小
-				TitleFont_color:"#ffffff" // 标题文字的颜色
-			}
-	});
-})
-</script>
+								btn_fontColor:"#CCCCCC", // 按钮文字的颜色
+
+								btn_borderColor:"#999999", // 按钮边框背景色
+								btn_borderHoverColor:"#ff6701" // 被选中时按钮边框的背景色
+							}, // 按钮的样式
+							titleFont:{
+								TitleFont_size:14, // 标题文字的大小
+								TitleFont_color:"#ffffff", // 标题文字的颜色
+							}
+						});
+					});
+				</script>
                        <!-- 轮播结束-->
                        <div class="box1_right_num1_right">
                            <!--登陆开始-->
@@ -208,13 +159,6 @@ $(function(){
             <!--4F家装旗舰店结束-->
         </div>
         <!--内容结束-->
-        <!--底部信息开始-->
-<script>
-$(function() {
-	//通过默认rel属性加载
-	$("#trigger1").powerFloat();
-});
-</script>
 		{dede:include filename="footer.htm"/}
     </div>
     </div>
