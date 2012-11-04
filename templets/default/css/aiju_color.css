@@ -192,7 +192,7 @@ border:1px solid #fcc659;
 .STYLE1 {color: #FF0000}
 /*热门商品结束*/
 .cuxiaohuodong{
-	background:url(http://img.sys.aiju.com/shop2011/cuxiao_bj.jpg)  no-repeat;
+	background:url(../images/cuxiao_bj.gif)  no-repeat;
 }
 .cuxiaohuodong_list li{
 	background:url(http://img.sys.aiju.com/shop2011/gray_point.jpg) no-repeat 0 11px;

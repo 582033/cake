@@ -309,7 +309,7 @@ text-align:center;
 /*装修建材开始*/
 .zxjc_1f{
 	width:950px;
-	height:585px;
+	height:200px;
 	margin-top:10px;
 }
 .zxjc_1f_top{
@@ -386,7 +386,7 @@ text-align:center;
 .jc_cuxiao ul li{
 	float:left;
 	width:165px;
-	height:250px;
+	height:165px;
 	margin:10px 11px 0 13px;
 	_margin:10px 10px 0 10px;
 }
@@ -452,7 +452,7 @@ border:1px #dddddd solid;
 border-bottom:none;
 }
 .zxzx_Menubox h3{
-	width:60px;
+	width:100px;
 	float:left;
 	margin-left:10px;
 }

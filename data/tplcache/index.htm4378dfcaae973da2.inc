@@ -19,9 +19,9 @@ $z[8]=Array("global","",895,927);
 $z[8][4]['name']="cfg_templets_skin";
 $z[9]=Array("include","",1661,1698);
 $z[9][4]['filename']="header.htm";
-$z[10]=Array("include","",7366,7407);
+$z[10]=Array("include","",9128,9169);
 $z[10][4]['filename']="index_menu.htm";
-$z[11]=Array("include","",7411,7448);
+$z[11]=Array("include","",9173,9210);
 $z[11][4]['filename']="footer.htm";
 
 ?>
