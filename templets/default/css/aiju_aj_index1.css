@@ -445,7 +445,7 @@ text-align:center;
 /*菜单class*/
 .zxzx_Menubox {
 width:948px;
-background: url(http://img.sys.aiju.com/shop2011/zxzx_bj.jpg) repeat-x;;
+background: url(../images/zxzx_bj.jpg) repeat-x;;
 height:29px;
 line-height:29px;
 border:1px #dddddd solid;
@@ -478,7 +478,7 @@ padding:0px;
 background:#fff;
 border-left:1px solid #dcdddd;
 border-right:1px solid #dcdddd;
-background:url(http://img.sys.aiju.com/shop2011/zxzx_link_bj.jpg) repeat-x;
+background:url(../images/zxzx_link_bj.jpg) repeat-x;
 color:#333;
 font-weight:bold;
 height:26px;
@@ -501,7 +501,7 @@ padding-top:8px;
 	float:left;
 	width:285px;
 	height:25px;
-	background:url(http://img.sys.aiju.com/shop2011/orager_sanjiao.jpg) no-repeat 0 5px;
+	background:url(../images/orager_sanjiao.jpg) no-repeat 0 5px;
 	text-align:left;
 }
 .zxzx_list dt a{
@@ -544,7 +544,7 @@ padding-top:8px;
 	width:16px;
 	color:#fff;
 	height:25px;
-	background:url(http://img.sys.aiju.com/shop2011/fang_or.gif) no-repeat center 3px;
+	background:url(../images/fang_or.gif) no-repeat center 3px;
 }
 .wenba_list dd{
 	float:right;
@@ -553,7 +553,7 @@ padding-top:8px;
 	text-align:left;
 }
 .wenba_list_2 dt{
-	background:url(http://img.sys.aiju.com/shop2011/fang_gr.gif) no-repeat center 3px;
+	background:url(../images/fang_gr.gif) no-repeat center 3px;
 	color:#000;
 }
 /*问吧结束*/
@@ -683,13 +683,13 @@ padding-top:8px;*/
 
 .rexiao_ph_list .tz_z4{ width:100%; float:left; margin-top:10px; height:113px; border:1px solid #cecece;}
 
-.rexiao_ph_list .sdheshang{ float:left; width:259px; height:99px; position:relative;display:none; background:url(http://img.sys.aiju.com/shop2011/ph_bj_grbj2.jpg);
+.rexiao_ph_list .sdheshang{ float:left; width:259px; height:99px; position:relative;display:none; background:url(../images/ph_bj_grbj2.jpg);
 border-left:none; border-right:none;}
-.rexiao_ph_list .sdheshang_b{background:url(http://img.sys.aiju.com/shop2011/ph_bj_grbj_2.gif);
+.rexiao_ph_list .sdheshang_b{background:url(../images/ph_bj_grbj_2.gif);
 }
-.rexiao_ph_list .sdheshang_c{background:url(http://img.sys.aiju.com/shop2011/ph_bj_grbj_3.gif);
+.rexiao_ph_list .sdheshang_c{background:url(../images/ph_bj_grbj_3.gif);
 }
-.rexiao_ph_list .sdheshang_d{background:url(http://img.sys.aiju.com/shop2011/ph_bj_grbj_4.gif);
+.rexiao_ph_list .sdheshang_d{background:url(../images/ph_bj_grbj_4.gif);
 }
 .rexiao_ph_list .sdheshang img{ width:80px; height:60px; /*display:block;*/ clear:both;}
 
@@ -697,33 +697,33 @@ border-left:none; border-right:none;}
 .rexiao_ph_list .touming ul{ height:26px; width:228px; float:left; padding-left:10px;}
 .rexiao_ph_list .touming ul li{ float:left; font-size:12px; line-height:26px; color:#fff;}
 .rexiao_ph_list .yincang ul li{ float:left; font-size:12px; line-height:29px;}
-.rexiao_ph_list .yincang{ height:30px; width:259px; background:url(http://img.sys.aiju.com/shop2011/ph_bj_grbj1.jpg);}
-.rexiao_ph_list .yincang ul{ height:30px; width:259px; float:left; background: url(http://img.sys.aiju.com/shop2011/ph_bj_grbj1.jpg); padding-left:10px; line-height:29px;}
-.rexiao_ph_list .yincang_b{ height:30px; width:259px; background:url(http://img.sys.aiju.com/shop2011/ph_bj_grbj2.gif);}
+.rexiao_ph_list .yincang{ height:30px; width:259px; background:url(../images/ph_bj_grbj1.jpg);}
+.rexiao_ph_list .yincang ul{ height:30px; width:259px; float:left; background: url(../images/ph_bj_grbj1.jpg); padding-left:10px; line-height:29px;}
+.rexiao_ph_list .yincang_b{ height:30px; width:259px; background:url(../images/ph_bj_grbj2.gif);}
 .rexiao_ph_list .yincang_b ul{
-	background: url(http://img.sys.aiju.com/shop2011/ph_bj_grbj2.gif);
+	background: url(../images/ph_bj_grbj2.gif);
 }
-.rexiao_ph_list .yincang_d{background:url(http://img.sys.aiju.com/shop2011/ph_bj_grbj4.gif);}
-.rexiao_ph_list .yincang_d ul{background:url(http://img.sys.aiju.com/shop2011/ph_bj_grbj4.gif);}
+.rexiao_ph_list .yincang_d{background:url(../images/ph_bj_grbj4.gif);}
+.rexiao_ph_list .yincang_d ul{background:url(../images/ph_bj_grbj4.gif);}
 
-.rexiao_ph_list .yincang_c{background:url(http://img.sys.aiju.com/shop2011/ph_bj_grbj3.gif)}
-.rexiao_ph_list .yincang_c ul{background:url(http://img.sys.aiju.com/shop2011/ph_bj_grbj3.gif)}
-.rexiao_ph_list .yincang ul li.a{ width:16px; height:29px; background: url(http://img.sys.aiju.com/shop2011/ph_bj_gr1.jpg) no-repeat 0 7px; font-size:12px; color:#000; padding:0px 8px 0 0px; text-align:center; margin-left:10px; _margin-left:5px;}
+.rexiao_ph_list .yincang_c{background:url(../images/ph_bj_grbj3.gif)}
+.rexiao_ph_list .yincang_c ul{background:url(../images/ph_bj_grbj3.gif)}
+.rexiao_ph_list .yincang ul li.a{ width:16px; height:29px; background: url(../images/ph_bj_gr1.jpg) no-repeat 0 7px; font-size:12px; color:#000; padding:0px 8px 0 0px; text-align:center; margin-left:10px; _margin-left:5px;}
 .rexiao_ph_list .yincang ul li.b{
-	background: url(http://img.sys.aiju.com/shop2011/ph_bj_grmun_2_2.jpg) no-repeat 0 7px;
+	background: url(../images/ph_bj_grmun_2_2.jpg) no-repeat 0 7px;
 }
 .rexiao_ph_list .yincang ul li.c{
-	background: url(http://img.sys.aiju.com/shop2011/ph_bj_gr_num3_2.jpg) no-repeat 0 7px;
+	background: url(../images/ph_bj_gr_num3_2.jpg) no-repeat 0 7px;
 }
 .rexiao_ph_list .yincang ul li.d{
-	background: url(http://img.sys.aiju.com/shop2011/ph_bj_gr_num_4_2.jpg) no-repeat 0 7px;
+	background: url(../images/ph_bj_gr_num_4_2.jpg) no-repeat 0 7px;
 }
 
 .rexiao_ph_list .tuominghong{
 	float:left;
 	width:16px;
 	height:16px;
-	background:url(http://img.sys.aiju.com/shop2011/ph_bj_gr2.jpg) no-repeat;
+	background:url(../images/ph_bj_gr2.jpg) no-repeat;
 	line-height:16px;
 	text-align:center;
 	color:#fff;
@@ -732,13 +732,13 @@ border-left:none; border-right:none;}
 	font-weight:bold;
 }
 .rexiao_ph_list .tuominghong_b{
-	background:url(http://img.sys.aiju.com/shop2011/ph_bj_gr_num2_1.jpg) no-repeat;
+	background:url(../images/ph_bj_gr_num2_1.jpg) no-repeat;
 }
 .rexiao_ph_list .tuominghong_c{
-	background:url(http://img.sys.aiju.com/shop2011/ph_bj_gr_num3_1.jpg) no-repeat;
+	background:url(../images/ph_bj_gr_num3_1.jpg) no-repeat;
 }
 .rexiao_ph_list .tuominghong_d{
-	background:url(http://img.sys.aiju.com/shop2011/ph_bj_gr_num4_1.jpg) no-repeat;
+	background:url(../images/ph_bj_gr_num4_1.jpg) no-repeat;
 }
 .rexiao_ph_list .touming{
 	width:180px;

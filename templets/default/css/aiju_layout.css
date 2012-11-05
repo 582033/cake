@@ -8,7 +8,7 @@ body{
 	font-size:12px;
 	line-height:160%;
 	font-family:"宋体";
-	background:url(http://img.sys.aiju.com/shop2011/9.26bj.jpg) repeat-x top;
+	background:url(../images/9.26bj.jpg) repeat-x top;
 }
 img{
 	border:none;
@@ -86,7 +86,7 @@ padding-left:15px;
 padding-top:8px;
 margin:0px;
 color:#FFF;
-background:url(http://img.sys.aiju.com/shop2011/aj_menu_bj.jpg) no-repeat;
+background:url(../images/aj_menu_bj.jpg) no-repeat;
 width:230px;
 height:34px;
 }
@@ -114,7 +114,7 @@ line-height:22px;
 .my_left_category .h2_cat{
 width:220px;
 height:30px;
-background-image:url(http://img.sys.aiju.com/shop2011/my_menubg.jpg);
+background-image:url(../images/my_menubg.jpg);
 background-position:0 3px;
 background-repeat:no-repeat;
 line-height:30px;
@@ -126,7 +126,7 @@ position:relative;
 .my_left_category .h2_cat_1{
 width:220px;
 height:30px;
-background-image:url(http://img.sys.aiju.com/shop2011/my_menubg_1.gif);
+background-image:url(../images/my_menubg_1.gif);
 background-repeat:no-repeat;
 line-height:30px;
 font-weight:normal;
@@ -186,7 +186,7 @@ position:inherit;
 width:549px;
 border:2px solid #eb5c11; margin-top:1px;
 border-left-width:0px;
-background:url(http://img.sys.aiju.com/shop2011/shadow_border.jpg) no-repeat 0px 25px;
+background:url(../images/shadow_border.jpg) no-repeat 0px 25px;
 background-color:#ffffff;
 margin-bottom:3px;
 padding-left:3px;
@@ -213,15 +213,15 @@ float:left;
 .my_left_cat_list .yiji_menu{
 	font-size:14px;
 	color:#ff7800;
-	background:url(http://img.sys.aiju.com/shop2011/zxjc.jpg) no-repeat 10px 4px;
+	background:url(../images/zxjc.jpg) no-repeat 10px 4px;
 }
 .my_left_cat_list .yiji_menu_1{
-	background:url(http://img.sys.aiju.com/shop2011/jydq.jpg) no-repeat 10px 4px;
+	background:url(../images/jydq.jpg) no-repeat 10px 4px;
 	font-size:14px;
 	color:#ff7800;
 }
 .my_left_cat_list .yiji_menu_2{
-	background:url(http://img.sys.aiju.com/shop2011/jjyp.jpg) no-repeat 10px 4px;
+	background:url(../images/jjyp.jpg) no-repeat 10px 4px;
 	font-size:14px;
 	color:#ff7800;
 }
@@ -331,7 +331,7 @@ a.menu_link_ga:active{
 .zzxxkkff{
 	width:300px;
 	height:130px;
-	background:url(http://img.sys.aiju.com/shop2011/tc_b.gif) no-repeat;
+	background:url(../images/tc_b.gif) no-repeat;
 }
 .zzxxkkff_button{
 	display:block;

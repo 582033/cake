@@ -55,7 +55,7 @@ body{
 	color:#fff;
 }
 .left_menu_top{
-	background:url(http://img.sys.aiju.com/shop2011/aj_menu_bj.jpg) no-repeat;
+	background:url(../images/aj_menu_bj.jpg) no-repeat;
 }
 .box1{
 }
@@ -72,23 +72,23 @@ body{
 }
 .cuxiaozq_Menubox li{
 color:#333333;
-background:url(http://img.sys.aiju.com/shop2011/xinpi_bj1.jpg) no-repeat;
+background:url(../images/xinpi_bj1.jpg) no-repeat;
 
 }
 .cuxiaozq_Menubox li.hover_menu{ 
 
-background:url(http://img.sys.aiju.com/shop2011/xinpi_bj.jpg) no-repeat;
+background:url(../images/xinpi_bj.jpg) no-repeat;
 color:#fff;
 
 }
 .cuxiaozq_Contentbox{
 border-top:3px solid #ff9114;
-background:url(http://img.sys.aiju.com/shop2011/xinpi_bj_middle.jpg) repeat-y;
+background:url(../images/xinpi_bj_middle.jpg) repeat-y;
 
 }
 .STYLE1 {color: #FF0000}
 .cuxiaozq_Contentbox .cuxiaozq_mottom{
-	background:url(http://img.sys.aiju.com/shop2011/xinpi_bj_bottom.jpg) no-repeat;
+	background:url(../images/xinpi_bj_bottom.jpg) no-repeat;
 }
 .cuxiaozq_list_list li{
 	color:#333;
@@ -100,13 +100,13 @@ background:url(http://img.sys.aiju.com/shop2011/xinpi_bj_middle.jpg) repeat-y;
 	border:5px #ff7e00 solid;
 }
 .qiangouzq .qiangouzq_list li{
-	background:url(http://img.sys.aiju.com/shop2011/qiangou_bj.jpg) no-repeat;
+	background:url(../images/qiangou_bj.jpg) no-repeat;
 }
 .lanmu1 .lanmu1_top{
-	background:url(http://img.sys.aiju.com/shop2011/fanlan_right.jpg) repeat-x;
+	background:url(../images/fanlan_right.jpg) repeat-x;
 }
 .lanmu1 .lanmu1_top .lanmu1_top_left{
-	background:url(http://img.sys.aiju.com/shop2011/fenlan_bj.jpg) no-repeat;
+	background:url(../images/fenlan_bj.jpg) no-repeat;
 }
 .lanmu1 .lanmu1_top .lanmu1_top_left h5{
 	color:#fff;
@@ -125,24 +125,24 @@ background:url(http://img.sys.aiju.com/shop2011/xinpi_bj_middle.jpg) repeat-y;
 	border:1px #dae0de solid;
 }
 .footer .xinshouzn .xinshouzn_middle{
-	background:url(http://img.sys.aiju.com/shop2011/friendlink_middle.jpg) repeat-x;
+	background:url(../images/friendlink_middle.jpg) repeat-x;
 
 }
 .xinshouzn_middle .xinshouzhinan{
 	color:3333;
-	background:url(http://img.sys.aiju.com/shop2011/xinshou.jpg) no-repeat top left;
+	background:url(../images/xinshou.jpg) no-repeat top left;
 }
 .xinshouzn_middle .xinshouzhinan_2{
-	background:url(http://img.sys.aiju.com/shop2011/zhufufs.jpg) no-repeat top left;
+	background:url(../images/zhufufs.jpg) no-repeat top left;
 }
 .xinshouzn_middle .xinshouzhinan_3{
-	background:url(http://img.sys.aiju.com/shop2011/gouwuche_tp.jpg) no-repeat top left;
+	background:url(../images/gouwuche_tp.jpg) no-repeat top left;
 }
 .xinshouzn_middle .xinshouzhinan_4{
-	background:url(http://img.sys.aiju.com/shop2011/shouhoufuwu.jpg) no-repeat top left;
+	background:url(../images/shouhoufuwu.jpg) no-repeat top left;
 }
 .xinshouzn_middle .gouwuliuc{
-	background:url(http://img.sys.aiju.com/shop2011/gray_point.jpg) no-repeat 35px 8px;
+	background:url(../images/gray_point.jpg) no-repeat 35px 8px;
 }
 .hezuohuoban{
 
@@ -161,21 +161,21 @@ background:url(http://img.sys.aiju.com/shop2011/xinpi_bj_middle.jpg) repeat-y;
 }
 
 .aiju_gonggao .aiju_gonggao_top{
-	background: url(http://img.sys.aiju.com/shop2011/gonggao_top.jpg) no-repeat;
+	background: url(../images/gonggao_top.jpg) no-repeat;
 }
 .aiju_gonggao .aiju_gonggao_middle{
-	background:url(http://img.sys.aiju.com/shop2011/gonggao_middle.jpg) repeat-y;
+	background:url(../images/gonggao_middle.jpg) repeat-y;
 }
 .aiju_gonggao .aiju_gonggao_top h4{
 	color:#f27c05;
 }
 .aiju_gonggao .aiju_gonggao_middle ul li{
-	background:url(http://img.sys.aiju.com/shop2011/gray_point.jpg) no-repeat 8px 10px;
+	background:url(../images/gray_point.jpg) no-repeat 8px 10px;
 }
 /*热门商品开始*/
 /*菜单class*/
 .remen_Menubox {
-background:url(http://img.sys.aiju.com/shop2011/rementuijian_bj.jpg) repeat-x;
+background:url(../images/rementuijian_bj.jpg) repeat-x;
 border:1px #d8d8d8 solid;
 }
 .remen_Menubox li{
@@ -183,7 +183,7 @@ color:#333333;
 }
 /*class=hover的li*/
 .remen_Menubox li.hover_menu{ 
-background: url(http://img.sys.aiju.com/shop2011/rementuijian.jpg) no-repeat;
+background: url(../images/rementuijian.jpg) no-repeat;
 color:#333333;
 }
 .remen_Contentbox{
@@ -195,33 +195,33 @@ border:1px solid #fcc659;
 	background:url(../images/cuxiao_bj.gif)  no-repeat;
 }
 .cuxiaohuodong_list li{
-	background:url(http://img.sys.aiju.com/shop2011/gray_point.jpg) no-repeat 0 11px;
+	background:url(../images/gray_point.jpg) no-repeat 0 11px;
 }
 .youhuiquan .youhuiquan_middle{
-	background:url(http://img.sys.aiju.com/shop2011/youhuiquan_middle.jpg) repeat-x;
+	background:url(../images/youhuiquan_middle.jpg) repeat-x;
 }
 .youhuiquan .youhuiquan_middle .youhui_top{
-	background:url(http://img.sys.aiju.com/shop2011/youhuiquan_pic.jpg) no-repeat left top;
+	background:url(../images/youhuiquan_pic.jpg) no-repeat left top;
 }
 .youhuiquan .youhuiquan_middle .youhui_top a{
-	background:url(http://img.sys.aiju.com/shop2011/youhui_mroe.jpg) no-repeat;
+	background:url(../images/youhui_mroe.jpg) no-repeat;
 }
 .youhui_mini{
 	color:#fff;
-	background: url(http://img.sys.aiju.com/shop2011/yhq_mini.gif) no-repeat;
+	background: url(../images/yhq_mini.gif) no-repeat;
 
 }
 .zhuangxiu_1f_top{
-	background:url(http://img.sys.aiju.com/shop2011/1f.jpg) no-repeat;
+	background:url(../images/1f.jpg) no-repeat;
 }
 .jydq_2f_top{
-	background:url(http://img.sys.aiju.com/shop2011/2f.jpg) no-repeat;
+	background:url(../images/2f.jpg) no-repeat;
 }
 .jiaju_3f_top{
-	background:url(http://img.sys.aiju.com/shop2011/3f.jpg) no-repeat;
+	background:url(../images/3f.jpg) no-repeat;
 }
 .jzqjd_4f_top{
-	background:url(http://img.sys.aiju.com/shop2011/4f.jpg) no-repeat;
+	background:url(../images/4f.jpg) no-repeat;
 }
 .zhuangxiu_1f_box1 dd{
 	background-color:#fff9e1;

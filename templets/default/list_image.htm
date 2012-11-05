@@ -1,87 +1,1438 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
-<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
-<meta name="keywords" content="{dede:field name='keywords'/}" />
-<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
-<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>橱柜:橱柜价格_热销橱柜品牌推荐_爱居者网上商城</title>
+<meta name="Description" content="爱居者:大型的橱柜网上商城,在线销售各种品牌橱柜,提供优惠的橱柜价格以及橱柜团购促销活动,并由厂家直接负责供货、配送、安装,为您提供便利的一站式购物体验" />
+<meta name="Keywords" content="橱柜,橱柜价格,橱柜品牌" />
+<link href="http://shop.aiju.com/app/shop/css/aiju_sc_index.css" type="text/css" rel="stylesheet" />
+<link href="http://www.aiju.com/css2/qq_type.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://js.sys.aiju.com//jquery/jquery-1.6.js"></script>
+<script type="text/javascript" src="http://js.sys.aiju.com//app/simpleCart.js"></script>
+<script type="text/javascript" src="http://js.sys.aiju.com//app/UrlUnit.js"></script>
+<!--
+<link type="text/css" rel="stylesheet" href="http://www.aiju.com/css2/qq_type.css">
+<style type="text/css">
+#show{
+	display:none;
+	margin:0px auto;
+}
+</style>
+-->
+<style type="text/css">
+        #qqonline{
+			position:absolute;
+            top:300px;
+            left:0px;
+            width:72px;
+            height:77px;
+        }
+</style>
 </head>
-</head>
-<body class="picboxlist">
-{dede:include filename="head.htm"/}
-<!-- /header -->
-<div class="w960 center clear mt1">
-	<div class="pleft">
-		<div class="place">
-			<strong>当前位置:</strong> {dede:field name='position'/}
-		</div><!-- /place -->
-		<div class="listbox">
-			<ul class="e8">
-           {dede:list pagesize='12'}
-				<li>
-					<a href="[field:arcurl/]" class="pic"><img src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]"/></a>
-					<a href="[field:arcurl/]" class="title">[field:title/]</a>
-					<span class="date"><small>最后更新：</small>[field:pubdate function="GetDateMK(@me)"/]</span>
-				</li>
-          {/dede:list}
-			</ul>
-		</div><!-- /listbox -->
-		<div class="dede_pages">
-			<ul class="pagelist">
-				{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
-			</ul>
-		</div><!-- /pages -->
-	</div><!-- /pleft -->
-	
-	<div class="pright">
-        <div>
-          <dl class="tbox">
-				<dt><strong>栏目列表</strong></dt>
-				<dd>
-					<ul class="d6">
-                      {dede:channel type='son' currentstyle="<li><a href='~typelink~' class='thisclass'>~typename~</a></li>"}
-		<li><a href='[field:typeurl/]'>[field:typename/]</a></li>{/dede:channel}
-					</ul>
-				</dd>
-			</dl>
+<script language="javascript">
+$(document).ready(function() {
+	$.ajax({url: '/ajax_session.php',
+			async: false,
+			beforeSend: function(){//发送消息前
+				$("#logining").empty().append("加载中.........");
+			},
+			success: function(msg){
+				$('#logining').html(msg);
+			}
+		});
+});
+</script>
+<script type="text/javascript">
+	$(window).scroll(function() {    // 页面发生scroll事件时触发
+		var bodyTop = 0;
+		if (typeof window.pageYOffset != 'undefined') {
+			bodyTop = window.pageYOffset;
+		}
+		 else if (typeof document.compatMode != 'undefined' && document.compatMode != 'BackCompat')
+		 {
+			bodyTop = document.documentElement.scrollTop;
+		}
+		else if (typeof document.body != 'undefined') {
+			bodyTop = document.body.scrollTop;
+		}
+
+		$("#qqonline").css("top", 500 + bodyTop);
+	});
+function inputvalue(value){
+	if(value == "ticket") {
+		document.getElementById(value).className ="dangqian_bq";
+		document.getElementById('product').className ="qita_bq_mr";
+		document.getElementById('brandshop').className ="qita_bq_mr";
+		
+		document.getElementById('cssbox').className ="aiju_menu_box";
+	}else if(value == "product") {
+		//document.getElementById('ticket').className ="dangqian_bq_mr";
+		document.getElementById(value).className ="qita_bq";
+		document.getElementById('brandshop').className ="qita_bq_mr";
+		
+		document.getElementById('cssbox').className ="aiju_menu_box2";
+	}else if(value == "brandshop") {
+		//document.getElementById('ticket').className ="dangqian_bq_mr";
+		document.getElementById('product').className ="qita_bq_mr";
+		document.getElementById(value).className ="qita_bq";
+		document.getElementById('cssbox').className ="aiju_menu_box2";
+	}
+	document.sreachdata.type.value=value;
+}
+
+</script>
+<script language="javascript">
+//去左右空格
+function trim(s){
+	return rtrim(ltrim(s));
+};
+
+//去左空格
+function ltrim(s){
+	s = s.replace(/^　+| +/, " ");
+	return s.replace(/^\s*/, "");
+};
+
+//去右空格
+function rtrim(s) {
+	s = s.replace(/　+| +$/, " ");
+	return s.replace(/\s*$/, "");
+};
+//判断字符串是否为空
+function isEmpty(s) {
+	s = trim(s);
+	return s.length == 0;
+};
+function submitData1() {
+		var f = document.sreachdata;
+		if(isEmpty(f.keyword.value)){
+			alert("提示：请输入您要查找的关键字");
+			return false;
+		}
+		document.sreachdata.submit();
+	}
+</script>
+
+<body>
+	<div class="main950">
+    	<!--头部开始-->
+       <div class="aiju_header">
+            <div class="loginbar">
+            	<ul class="aiju_login left" id="logining"></ul>
+                <ul class="aiju_login right aiju_login_r">
+                <!--	<li><a target="_blank" href="http://pay.aiju.com/shop_cart.php" class="shangpin_mc">购物车</a></li>-->
+                    <li><a target="_blank" href="http://user.aiju.com/2011/order_list.php" class="shangpin_mc">我的订单</a></li>
+                    <li><a target="_blank" href="http://user.aiju.com/" class="shangpin_mc">我的爱居</a></li>
+                    <li><a target="_blank" href="http://www.aiju.com/help/" class="shangpin_mc">帮助中心</a></li>
+                    <li><a href="javascript:void(0);" onclick="addcollectnum();" class="shangpin_mc">收藏本站</a></li>
+                    <li class="gsdh_tel">400-898-5559</li>
+                </ul>
+				<ul class="xiala_menu right">
+                    <li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'">购物车&nbsp;<img src="http://img.sys.aiju.com//shop2011/xialasanjiao.gif" width="8" height="5" align="absmiddle" />
+                    <div class="list_xiala">
+                        <a href="http://pay.aiju.com/shop_cart.php">商品[<span class="simpleCart_quantity">0</span>件]</a><br />
+                        <!--<a href="http://pay.aiju.com/ticket_order.php">代金券[<span id="ticketnum">0</span>个]</a><br />-->
+                    </div>
+                    </li>
+				</ul>
+            </div>
+            <!--<div class="head_banner"></div>-->
+            <div class="aiju_menu">
+            	<div class="aiju_menu_logo"><a href="http://www.aiju.com/"><img src="http://img.sys.aiju.com//shop2011/9.26aijulogo.jpg" width="217" height="60" /></a></div>
+				<div class="aiju_menu_zhanwei"><img src="http://img.sys.aiju.com//shop2011/zhanwei.jpg" width="170" height="102" /></div>
+                <div class="aiju_menu_sousuo">
+                	<form action="http://shop.aiju.com/shop_search.php" method="post" name="sreachdata" id="sreachdata">
+					<input type="hidden" value="product" name="type" />
+                	<ul class="sousuo_biaoq">
+                    	<!--<li><a href="javascript:void(0);"  class="dangqian_bq" onfocus="this.blur()" id="ticket" onclick="inputvalue('ticket');">代金劵</a></li>
+                        <li><a href="javascript:void(0);"  class="qita_bq"  id="product" onclick="inputvalue('product');" onfocus="this.blur()">商品</a></li>
+                        <li><a href="javascript:void(0);" class="qita_bq_mr" id="brandshop" onclick="inputvalue('brandshop');" onfocus="this.blur()">旗舰店</a></li>-->
+						 <li><a href="javascript:void(0);"  class="dangqian_bq"  id="product" onclick="inputvalue('product');" onfocus="this.blur()">商品</a></li>
+                        <li><a href="javascript:void(0);" class="qita_bq_mr" id="brandshop" onclick="inputvalue('brandshop');" onfocus="this.blur()">旗舰店</a></li>
+                    </ul>
+                    <div class="aiju_menu_box" id="cssbox">
+                        <div class="aiju_menu_boxmiddle left"><input type="text" value="" name="keyword"  class="sousuo_gjz"/></div>
+                        <div class="aiju_menu_boxright left"><input type="button" value="" name="" class="sousuo_button" onclick="submitData1();" /></div>
+                    </div>
+					</form>
+                    <!--<ul class="renmen_sousuo">
+                    	<li>热门搜索：</li>
+                        <li><a href="http://www.aiju.com/ticket/ticket_brand.php?brandid=145" target="_blank">书香门地</a></li>
+                        <li><a href="http://www.aiju.com/ticket/ticket_brand.php?brandid=44"  target="_blank">惠达</a></li>
+                        <li><a href="http://www.aiju.com/ticket/ticket_brand.php?brandid=130" target="_blank">TATA</a></li>
+                        <li><a href="http://www.aiju.com/ticket/ticket_brand.php?brandid=134" target="_blank">志邦</a></li>
+						<li><a href="http://www.aiju.com/ticket/ticket_brand.php?brandid=112" target="_blank">史密斯</a></li>
+                    </ul>-->
+                </div>
+            </div>
+            <!--导航条开始-->
+            <div class="dht">
+            	<ul>
+                	<li class="dht_1"><a href="http://www.aiju.com/" class="dht_link1">首页</a></li>
+
+                    <li class="dht_4"><a href="http://shop.aiju.com/" class="dht_link">建材</a></li>
+
+                    <!--<li class="dht_4"><a href="http://www.aiju.com/ticket/" class="dht_link1">代金券</a></li>-->
+
+                    <li class="dht_4"><a href="http://zx.aiju.com/" class="dht_link1">家装</a></li>
+
+                    <li class="dht_4"><a href="http://pinpai.aiju.com/" class="dht_link1">旗舰店</a></li>
+
+                    <li class="dht_4"><a href="http://www.aiju.com/hot/" class="dht_link1">促销</a></li>
+
+                    <li class="dht_3"><!--<img src="http://img.sys.aiju.com//shop2011/menu_bj2.jpg" width="31" height="33" />--></li>
+                    <li class="dht_6"></li>
+
+                    <li class="dht_2"><a href="http://wenba.aiju.com/" class="dht_link1">问吧</a></li>
+
+                    <li class="dht_2"><a href="http://bbs.aiju.com/" class="dht_link1">论坛</a></li>
+
+                    <li class="dht_5"><a href="http://zx.aiju.com/case/" class="dht_link1">案例</a></li>
+                </ul>
+                <!--<div class="hot_pic"><img src="http://img.sys.aiju.com//shop2011/hot.gif" width="26" height="14" /></div>-->
+            </div>
+            <!--导航条结束-->
         </div>
-        <div id="listRtPicAD" style="margin:10px auto">{dede:myad name='listRtPicAD'/}</div>
-    	<div class="">
-			<dl class="tbox">
-				<dt><strong>热点图集</strong></dt>
-				<dd>
-					<ul class="e3">
-                    {dede:arclist row='5' type='image.' orderby=click}
-						<li>
-							<a href="[field:arcurl/]" class="preview"><img src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]"/></a>
-							<a href="[field:arcurl/]" class="title">[field:title/]</a>
-							<span class="intro">更新:[field:pubdate function="GetDateMK(@me)"/]</span>
-						</li>
-                     {/dede:arclist}
-
-					</ul>
-				</dd>
-			</dl>
-		</div>
-		<div class="mt1">
-			<dl class="tbox">
-				<dt><strong>推荐图集</strong></dt>
-				<dd>
-					<ul class="e9">
-                    {dede:arclist row='8' type='image.commend.'}
-						<li><a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]"/><span class="title">[field:title/]</span></a></li>
-                    {/dede:arclist}
-					</ul>
-				</dd>
-			</dl>
-		</div>
-        <div id="listRtPicAD2" style="margin:10px auto">{dede:myad name='listRtPicAD2'/}</div>
-	</div><!-- /pright -->
+        <!--头部结束-->
+<!--客服开始
+<div id="qqonline" class="zzzxxx">
+	<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=800021971&site=qq&menu=yes"><img src="http://img.sys.aiju.com//shop2011/kf_pic.gif" border="0" /></a>
 </div>
-<div id="innerfooterAD" style="margin:10px auto; width:726px">{dede:myad name='innerfooterAD'/}</div>
-{dede:include filename="footer.htm"/}
-<!-- /footer -->
+客服结束-->
+<script type="text/javascript" src="http://js.sys.aiju.com/app/ticketCookie.js"></script><link href="http://shop.aiju.com/app/shop/css/aiju_sc_lb.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://js.sys.aiju.com//jquery/jquery.lazyload.mini.js"></script>
+ <script type="text/javascript">
+ $(function() {
+$("img").lazyload();
+ });
+ </script>
+        <!--头部结束-->
+        <!--内容开始-->
+        <div class="aiju_content">
+            <div class="daohang">
+                <div class="daohang_pic"><img src="http://img.sys.aiju.com//shop2011/ajsc.jpg" width="121" height="37" /></div>
+                <p class="daohang_text"><span class="blue"><a href="http://www.aiju.com/"style="TEXT-DECORATION:none;"class="blue">首页</a> > <a href="http://shop.aiju.com/" style="TEXT-DECORATION:none;"class="blue">建材</a> > </span>橱柜 </p>
+            </div>
+           <!--左侧开始-->
+            <script type="text/javascript" src="http://js.sys.aiju.com/jquery/jquery.treeview.js"></script>
+<link rel="stylesheet" href="http://js.sys.aiju.com/jquery/jquery.treeview.css" type="text/css" />
+<script language="javascript">
+$(document).ready(function(){
+$("#example").treeview();
+});
 
+</script>
+<!--左侧开始-->
+<div class="sc_left_menu">
+  <!--菜单开始-->
+    <div class="sc_spfl">
+    <ul id="example" class="filetree">
+		<li><span class="folder">所有商品分类</span>
+		<ul>
+		  		  <li class="closed"><span class="folder">家私家具</span>
+			<ul>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/shufangjiaju/" class="tree_mune_erji_1">书房家具</a><span class="gary94" style="font-weight:normal;">(4)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/shuzhuo/" class="tree_mune_sanji">书桌</a></span><span class="gary94">(2)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/shugui/" class="tree_mune_sanji">书柜</a></span><span class="gary94">(2)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/cantingjiaju/" class="tree_mune_erji_1">餐厅家具</a><span class="gary94" style="font-weight:normal;">(5)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/canyi/" class="tree_mune_sanji">餐椅</a></span><span class="gary94">(4)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/canzhuo/" class="tree_mune_sanji">餐桌</a></span><span class="gary94">(1)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/ketingjiaju/" class="tree_mune_erji_1">客厅家具</a><span class="gary94" style="font-weight:normal;">(31)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/shiwujia/" class="tree_mune_sanji">饰物架</a></span><span class="gary94">(3)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/digui/" class="tree_mune_sanji">地柜</a></span><span class="gary94">(4)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/chaji/" class="tree_mune_sanji">茶几</a></span><span class="gary94">(2)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/shafa/" class="tree_mune_sanji">沙发</a></span><span class="gary94">(22)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/woshijiaju/" class="tree_mune_erji_1">卧室家具</a><span class="gary94" style="font-weight:normal;">(35)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dougui/" class="tree_mune_sanji">斗柜</a></span><span class="gary94">(2)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/yiguishuzhuangtai/" class="tree_mune_sanji">衣柜梳妆台</a></span><span class="gary94">(27)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/chuang/" class="tree_mune_sanji">床</a></span><span class="gary94">(6)</span></li>
+				  				</ul>
+			  </li>
+			  			</ul>
+		  </li>
+		  		  <li ><span class="folder">装修建材</span>
+			<ul>
+			  			  <li ><span class="folder"><a href="http://shop.aiju.com/chugui/" class="tree_mune_erji">橱柜</a><span class="gary94" style="font-weight:normal;">(278)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/guiti/" class="tree_mune_sanji">柜体</a></span><span class="gary94">(47)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/shuicao/" class="tree_mune_sanji">水槽</a></span><span class="gary94">(152)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/taimian/" class="tree_mune_sanji">台面</a></span><span class="gary94">(22)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/zhengtichugui/" class="tree_mune_sanji">整体橱柜</a></span><span class="gary94">(57)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/qunuanshebei/" class="tree_mune_erji_1">取暖设备</a><span class="gary94" style="font-weight:normal;">(164)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dinuan/" class="tree_mune_sanji">地暖</a></span><span class="gary94">(7)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/sanreqi/" class="tree_mune_sanji">散热器</a></span><span class="gary94">(157)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/shicai/" class="tree_mune_erji_1">石材</a><span class="gary94" style="font-weight:normal;">(159)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/huagangyan/" class="tree_mune_sanji">花岗岩</a></span><span class="gary94">(0)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dalishi/" class="tree_mune_sanji">大理石</a></span><span class="gary94">(0)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/menchuang/" class="tree_mune_erji_1">门窗</a><span class="gary94" style="font-weight:normal;">(1250)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/yangtaimenchuang/" class="tree_mune_sanji">阳台门窗</a></span><span class="gary94">(29)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/shineimen/" class="tree_mune_sanji">室内门</a></span><span class="gary94">(1221)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/wujin/" class="tree_mune_erji_1">五金</a><span class="gary94" style="font-weight:normal;">(1050)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/yushiguajian/" class="tree_mune_sanji">浴室挂件</a></span><span class="gary94">(403)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/jiaofa/" class="tree_mune_sanji">角阀</a></span><span class="gary94">(3)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/menxi/" class="tree_mune_sanji">门吸</a></span><span class="gary94">(2)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/suoju/" class="tree_mune_sanji">锁具</a></span><span class="gary94">(8)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dilou/" class="tree_mune_sanji">地漏</a></span><span class="gary94">(270)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/huasa/" class="tree_mune_sanji">花洒</a></span><span class="gary94">(106)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/longtou/" class="tree_mune_sanji">龙头</a></span><span class="gary94">(256)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/wujinzuhe/" class="tree_mune_sanji">五金组合</a></span><span class="gary94">(2)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/jieju/" class="tree_mune_erji_1">洁具</a><span class="gary94" style="font-weight:normal;">(1222)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/linyufang/" class="tree_mune_sanji">淋浴房</a></span><span class="gary94">(336)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/mianpen/" class="tree_mune_sanji">面盆</a></span><span class="gary94">(167)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/linyuping/" class="tree_mune_sanji">淋浴屏</a></span><span class="gary94">(58)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/jiejuzuhe/" class="tree_mune_sanji">洁具组合</a></span><span class="gary94">(48)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/zuoce/" class="tree_mune_sanji">坐厕</a></span><span class="gary94">(296)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/yushigui/" class="tree_mune_sanji">浴室柜</a></span><span class="gary94">(146)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/yugang/" class="tree_mune_sanji">浴缸</a></span><span class="gary94">(171)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/cizhuan/" class="tree_mune_erji_1">瓷砖</a><span class="gary94" style="font-weight:normal;">(2765)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dixian/" class="tree_mune_sanji">地线</a></span><span class="gary94">(20)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/qiangzhuan/" class="tree_mune_sanji">墙砖</a></span><span class="gary94">(1050)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dizhuan/" class="tree_mune_sanji">地砖</a></span><span class="gary94">(1307)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/yaojiaoxian/" class="tree_mune_sanji">腰角线</a></span><span class="gary94">(408)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/diban/" class="tree_mune_erji_1">地板</a><span class="gary94" style="font-weight:normal;">(382)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/qianghuafuhe/" class="tree_mune_sanji">强化复合地板</a></span><span class="gary94">(278)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/shimufuhe/" class="tree_mune_sanji">实木复合地板</a></span><span class="gary94">(54)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/shimudiban/" class="tree_mune_sanji">实木地板</a></span><span class="gary94">(50)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/youqibizhi/" class="tree_mune_erji_1">油漆壁纸</a><span class="gary94" style="font-weight:normal;">(482)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/muqiqi/" class="tree_mune_sanji">木器漆</a></span><span class="gary94">(6)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/diqi/" class="tree_mune_sanji">地漆</a></span><span class="gary94">(45)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/qiangqi/" class="tree_mune_sanji">墙漆</a></span><span class="gary94">(96)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/bizhi/" class="tree_mune_sanji">壁纸</a></span><span class="gary94">(335)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/diangongdianliao/" class="tree_mune_erji_1">电工电料</a><span class="gary94" style="font-weight:normal;">(893)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/taocan/" class="tree_mune_sanji">套餐</a></span><span class="gary94">(50)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dengju/" class="tree_mune_sanji">灯具</a></span><span class="gary94">(374)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/chazuo/" class="tree_mune_sanji">插座</a></span><span class="gary94">(316)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/kaiguan/" class="tree_mune_sanji">开关</a></span><span class="gary94">(203)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/diaoding/" class="tree_mune_erji_1">吊顶</a><span class="gary94" style="font-weight:normal;">(251)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/lvkouban/" class="tree_mune_sanji">铝扣板</a></span><span class="gary94">(156)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/jichengdianqi/" class="tree_mune_sanji">集成电器</a></span><span class="gary94">(95)</span></li>
+				  				</ul>
+			  </li>
+			  			</ul>
+		  </li>
+		  		  <li class="closed"><span class="folder">家居用品</span>
+			<ul>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/chuangshangyongpin/" class="tree_mune_erji_1">床上用品</a><span class="gary94" style="font-weight:normal;">(174)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/jibenchuangpin/" class="tree_mune_sanji">基本床品</a></span><span class="gary94">(13)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/zuhechuangpin/" class="tree_mune_sanji">组合床品</a></span><span class="gary94">(161)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/jiajushipin/" class="tree_mune_erji_1">家居饰品</a><span class="gary94" style="font-weight:normal;">(139)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/penjing/" class="tree_mune_sanji">盆景</a></span><span class="gary94">(7)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/ditan/" class="tree_mune_sanji">地毯</a></span><span class="gary94">(10)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/didian/" class="tree_mune_sanji">地垫</a></span><span class="gary94">(122)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/liangshaishouna/" class="tree_mune_erji_1">晾晒收纳</a><span class="gary94" style="font-weight:normal;">(16)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/liangyijia/" class="tree_mune_sanji">晾衣架</a></span><span class="gary94">(16)</span></li>
+				  				</ul>
+			  </li>
+			  			</ul>
+		  </li>
+		  		  <li class="closed"><span class="folder">家用电器</span>
+			<ul>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/shenghuodianqi/" class="tree_mune_erji_1">生活电器</a><span class="gary94" style="font-weight:normal;">(155)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/yuba/" class="tree_mune_sanji">浴霸</a></span><span class="gary94">(14)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dianfengshan/" class="tree_mune_sanji">电风扇</a></span><span class="gary94">(45)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dianyundou/" class="tree_mune_sanji">电熨斗</a></span><span class="gary94">(6)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/jinghuaqi/" class="tree_mune_sanji">净化器</a></span><span class="gary94">(16)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/jiashiqi/" class="tree_mune_sanji">加湿器</a></span><span class="gary94">(14)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/yinshuiji/" class="tree_mune_sanji">饮水机</a></span><span class="gary94">(23)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/huanqishan/" class="tree_mune_sanji">换气扇</a></span><span class="gary94">(28)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/xichenqi/" class="tree_mune_sanji">吸尘器</a></span><span class="gary94">(2)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/kongqijinghuaqi/" class="tree_mune_sanji">空气净化器</a></span><span class="gary94">(6)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/gerenhuli/" class="tree_mune_erji_1">个人护理</a><span class="gary94" style="font-weight:normal;">(16)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/tiwenji/" class="tree_mune_sanji">体温计</a></span><span class="gary94">(2)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dianchuifeng/" class="tree_mune_sanji">电吹风</a></span><span class="gary94">(10)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/timaoji/" class="tree_mune_sanji">剃/脱毛器</a></span><span class="gary94">(1)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/xueyaji/" class="tree_mune_sanji">血压计</a></span><span class="gary94">(3)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/dajiadian/" class="tree_mune_erji_1">大家电</a><span class="gary94" style="font-weight:normal;">(217)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/touyingyi/" class="tree_mune_sanji">投影仪</a></span><span class="gary94">(2)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/reshuiqi/" class="tree_mune_sanji">热水器</a></span><span class="gary94">(182)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/kongtiao/" class="tree_mune_sanji">空调</a></span><span class="gary94">(22)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/bingxiang/" class="tree_mune_sanji">冰箱</a></span><span class="gary94">(11)</span></li>
+				  				</ul>
+			  </li>
+			  			  <li class="closed"><span class="folder"><a href="http://shop.aiju.com/chufangdianqi/" class="tree_mune_erji_1">厨房电器</a><span class="gary94" style="font-weight:normal;">(458)</span></span>
+				<ul>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/zaoju/" class="tree_mune_sanji">灶具</a></span><span class="gary94">(62)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/weibolu/" class="tree_mune_sanji">微波炉</a></span><span class="gary94">(12)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/diancilu/" class="tree_mune_sanji">电磁炉</a></span><span class="gary94">(3)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/yanzaozuhe/" class="tree_mune_sanji">烟灶组合</a></span><span class="gary94">(19)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/chouyouyanji/" class="tree_mune_sanji">抽油烟机</a></span><span class="gary94">(64)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/guoshuji/" class="tree_mune_sanji">果蔬机</a></span><span class="gary94">(1)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dianfanbao/" class="tree_mune_sanji">电饭煲</a></span><span class="gary94">(16)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/diankaoxiang/" class="tree_mune_sanji">电烤箱</a></span><span class="gary94">(11)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/jiaobanji/" class="tree_mune_sanji">搅拌机</a></span><span class="gary94">(2)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/zhengqilu/" class="tree_mune_sanji">蒸汽炉</a></span><span class="gary94">(1)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dianbingcheng/" class="tree_mune_sanji">电饼铛</a></span><span class="gary94">(2)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/zhazhiji/" class="tree_mune_sanji">榨汁机</a></span><span class="gary94">(2)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dianhuoguo/" class="tree_mune_sanji">电火锅</a></span><span class="gary94">(2)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dianshuihu/" class="tree_mune_sanji">电水壶</a></span><span class="gary94">(6)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/doujiangji/" class="tree_mune_sanji">豆浆机</a></span><span class="gary94">(4)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/xiaodugui/" class="tree_mune_sanji">消毒柜</a></span><span class="gary94">(50)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/dianyaliguo/" class="tree_mune_sanji">电压力锅</a></span><span class="gary94">(5)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/shuichuli/" class="tree_mune_sanji">水处理</a></span><span class="gary94">(192)</span></li>
+				  				  <li><span class="file"><a href="http://shop.aiju.com/diandunguo/" class="tree_mune_sanji">电炖锅</a></span><span class="gary94">(4)</span></li>
+				  				</ul>
+			  </li>
+			  			</ul>
+		  </li>
+		  		</ul>
+	  </li>
+    </ul>
+  </div>
+    <!--菜单结束-->
+    <div class="dfrxph">
+    <h4>相关店铺热销排行</h4>
+        <p><a href="http://xingyiwenkang.pinpai.aiju.com/" class="shangpin_mc">星艺温康品牌旗舰店</a><span class="gary94">成交：</span><span class="orangeb">0</span></p>
+        <p><a href="http://haosaier.pinpai.aiju.com/" class="shangpin_mc">豪赛尔品牌旗舰店</a><span class="gary94">成交：</span><span class="orangeb">0</span></p>
+        <p><a href="http://zhibang.pinpai.aiju.com/" class="shangpin_mc">志邦品牌旗舰店</a><span class="gary94">成交：</span><span class="orangeb">0</span></p>
+        <p><a href="http://haojiayi.pinpai.aiju.com/" class="shangpin_mc">好佳益品牌旗舰店</a><span class="gary94">成交：</span><span class="orangeb">0</span></p>
+        <p><a href="http://nide.pinpai.aiju.com/" class="shangpin_mc">尼德品牌旗舰店</a><span class="gary94">成交：</span><span class="orangeb">0</span></p>
+        <p><a href="http://pulemei.pinpai.aiju.com/" class="shangpin_mc">普乐美品牌旗舰店</a><span class="gary94">成交：</span><span class="orangeb">0</span></p>
+        <p><a href="http://desilang.pinpai.aiju.com/" class="shangpin_mc">德斯朗品牌旗舰店</a><span class="gary94">成交：</span><span class="orangeb">0</span></p>
+        <p><a href="http://yuxiang.pinpai.aiju.com/" class="shangpin_mc">御象品牌旗舰店</a><span class="gary94">成交：</span><span class="orangeb">0</span></p>
+        <p><a href="http://huida.pinpai.aiju.com/" class="shangpin_mc">惠达品牌旗舰店</a><span class="gary94">成交：</span><span class="orangeb">0</span></p>
+     </div>
+    <div class="shangpin_ph">
+    <h4>商城热销商品排行</h4>
+    <div class="shangpin_ph_list">
+      <table border="0" cellspacing="0" cellpadding="0" width="94%" class="shangpin_ph_list_top">
+        <tr>
+          <th width="20%" align="center" valign="middle" height="28">排行</th>
+          <th width="61%" align="center" valign="middle" height="28">商品</th>
+          <th width="19%" align="center" valign="middle" height="28">商城价</th>
+        </tr>
+      </table>
+            <div class="yincang" style="display:none" id="nianrui2" onMouseOver="leo(this,document.getElementById('nianrui1'),true)">
+      <ul>
+        <li class="a">1</li>
+        <li class="yincang_mingcheng">卢森强化复合</li>
+        <li><span class="redb">￥496</span></li>
+      </ul>
+    </div>
+    <div class="sdheshang" style="display:block" id="nianrui1">
+      <div class="tuominghong">1</div>
+      <div class="touming">
+        <ul>
+          <li><a href="http://shop.aiju.com/p30364.shtml" class="oranger_link"><strong>卢森强化复合地板-帕拉索</strong></a></li>
+        </ul>
+      </div>
+      <dl class="rexiao_paihang">
+        <dt> <a href="http://shop.aiju.com/p30364.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2010/0120/150x150_1263963312_pdt_slvo.png" width="67" height="68" /></a></dt>
+        <dd>
+          <p ><span class="gary94 xiahua">￥496元</span></p>
+          <p><span class="redb">￥496元</span></p>
+          <p >已售出<span class="orange"> 800 </span>件</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="clear"></div>
+          <div class="yincang" id="a1" onMouseOver="leo(this,document.getElementById('b1'))">
+      <ul>
+        <li class="a">2</li>
+        <li class="yincang_mingcheng">家元素床上用</li>
+        <li><span class="redb">￥457.6</span></li>
+      </ul>
+    </div>
+    <div class="sdheshang" id="b1">
+      <div class="tuominghong">2</div>
+      <div class="touming">
+        <ul>
+          <li><a href="http://shop.aiju.com/p6792.shtml" class="oranger_link"><strong>家元素床上用品四件套-花</strong></a></li>
+        </ul>
+      </div>
+      <dl class="rexiao_paihang">
+        <dt> <a href="http://shop.aiju.com/p6792.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/0804/150x150_1249354046_pdt_x1ny.png" width="67" height="68" /></a></dt>
+        <dd>
+          <p ><span class="gary94 xiahua">￥1314元</span></p>
+          <p><span class="redb">￥457.6元</span></p>
+          <p >已售出<span class="orange"> 800 </span>件</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="clear"></div>
+          <div class="yincang" id="a2" onMouseOver="leo(this,document.getElementById('b2'))">
+      <ul>
+        <li class="a">3</li>
+        <li class="yincang_mingcheng">蒙娜丽莎—米</li>
+        <li><span class="redb">￥66.7</span></li>
+      </ul>
+    </div>
+    <div class="sdheshang" id="b2">
+      <div class="tuominghong">3</div>
+      <div class="touming">
+        <ul>
+          <li><a href="http://shop.aiju.com/p20827.shtml" class="oranger_link"><strong>蒙娜丽莎—米兰时尚系列—</strong></a></li>
+        </ul>
+      </div>
+      <dl class="rexiao_paihang">
+        <dt> <a href="http://shop.aiju.com/p20827.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/0717/150x150_1247806320_pdt_w3vs.png" width="67" height="68" /></a></dt>
+        <dd>
+          <p ><span class="gary94 xiahua">￥78.5元</span></p>
+          <p><span class="redb">￥66.7元</span></p>
+          <p >已售出<span class="orange"> 800 </span>件</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="clear"></div>
+          <div class="yincang" id="a3" onMouseOver="leo(this,document.getElementById('b3'))">
+      <ul>
+        <li class="a">4</li>
+        <li class="yincang_mingcheng">享家凯撒壁纸</li>
+        <li><span class="redb">￥1090</span></li>
+      </ul>
+    </div>
+    <div class="sdheshang" id="b3">
+      <div class="tuominghong">4</div>
+      <div class="touming">
+        <ul>
+          <li><a href="http://shop.aiju.com/p32046.shtml" class="oranger_link"><strong>享家凯撒壁纸-ms703</strong></a></li>
+        </ul>
+      </div>
+      <dl class="rexiao_paihang">
+        <dt> <a href="http://shop.aiju.com/p32046.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2011/0316/150x150_1300259770_pdt_73c5.jpg" width="67" height="68" /></a></dt>
+        <dd>
+          <p ><span class="gary94 xiahua">￥1090元</span></p>
+          <p><span class="redb">￥1090元</span></p>
+          <p >已售出<span class="orange"> 800 </span>件</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="clear"></div>
+          <div class="yincang" id="a4" onMouseOver="leo(this,document.getElementById('b4'))">
+      <ul>
+        <li class="a">5</li>
+        <li class="yincang_mingcheng">美的-冰箱-</li>
+        <li><span class="redb">￥2098</span></li>
+      </ul>
+    </div>
+    <div class="sdheshang" id="b4">
+      <div class="tuominghong">5</div>
+      <div class="touming">
+        <ul>
+          <li><a href="http://shop.aiju.com/p21523.shtml" class="oranger_link"><strong>美的-冰箱-BCD-17</strong></a></li>
+        </ul>
+      </div>
+      <dl class="rexiao_paihang">
+        <dt> <a href="http://shop.aiju.com/p21523.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/0720/150x150_1248054180_pdt_ms3d.png" width="67" height="68" /></a></dt>
+        <dd>
+          <p ><span class="gary94 xiahua">￥2098元</span></p>
+          <p><span class="redb">￥2098元</span></p>
+          <p >已售出<span class="orange"> 800 </span>件</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="clear"></div>
+          <div class="yincang" id="a5" onMouseOver="leo(this,document.getElementById('b5'))">
+      <ul>
+        <li class="a">6</li>
+        <li class="yincang_mingcheng">美的-电扇（</li>
+        <li><span class="redb">￥139</span></li>
+      </ul>
+    </div>
+    <div class="sdheshang" id="b5">
+      <div class="tuominghong">6</div>
+      <div class="touming">
+        <ul>
+          <li><a href="http://shop.aiju.com/p22600.shtml" class="oranger_link"><strong>美的-电扇（台扇）-FT</strong></a></li>
+        </ul>
+      </div>
+      <dl class="rexiao_paihang">
+        <dt> <a href="http://shop.aiju.com/p22600.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/0722/150x150_1248257665_pdt_mf3i.png" width="67" height="68" /></a></dt>
+        <dd>
+          <p ><span class="gary94 xiahua">￥139元</span></p>
+          <p><span class="redb">￥139元</span></p>
+          <p >已售出<span class="orange"> 800 </span>件</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="clear"></div>
+          <div class="yincang" id="a6" onMouseOver="leo(this,document.getElementById('b6'))">
+      <ul>
+        <li class="a">7</li>
+        <li class="yincang_mingcheng">法恩莎实木浴</li>
+        <li><span class="redb">￥704</span></li>
+      </ul>
+    </div>
+    <div class="sdheshang" id="b6">
+      <div class="tuominghong">7</div>
+      <div class="touming">
+        <ul>
+          <li><a href="http://shop.aiju.com/p26096.shtml" class="oranger_link"><strong>法恩莎实木浴室柜-FP4</strong></a></li>
+        </ul>
+      </div>
+      <dl class="rexiao_paihang">
+        <dt> <a href="http://shop.aiju.com/p26096.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/0819/150x150_1250671258_pdt_0akd.png" width="67" height="68" /></a></dt>
+        <dd>
+          <p ><span class="gary94 xiahua">￥1005.7元</span></p>
+          <p><span class="redb">￥704元</span></p>
+          <p >已售出<span class="orange"> 800 </span>件</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="clear"></div>
+          <div class="yincang" id="a7" onMouseOver="leo(this,document.getElementById('b7'))">
+      <ul>
+        <li class="a">8</li>
+        <li class="yincang_mingcheng">史密斯-变容</li>
+        <li><span class="redb">￥1968</span></li>
+      </ul>
+    </div>
+    <div class="sdheshang" id="b7">
+      <div class="tuominghong">8</div>
+      <div class="touming">
+        <ul>
+          <li><a href="http://shop.aiju.com/p30600.shtml" class="oranger_link"><strong>史密斯-变容速热节能系列</strong></a></li>
+        </ul>
+      </div>
+      <dl class="rexiao_paihang">
+        <dt> <a href="http://shop.aiju.com/p30600.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2010/0122/150x150_1264147871_pdt_4r2z.png" width="67" height="68" /></a></dt>
+        <dd>
+          <p ><span class="gary94 xiahua">￥1968元</span></p>
+          <p><span class="redb">￥1968元</span></p>
+          <p >已售出<span class="orange"> 800 </span>件</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="clear"></div>
+          <div class="yincang" id="a8" onMouseOver="leo(this,document.getElementById('b8'))">
+      <ul>
+        <li class="a">9</li>
+        <li class="yincang_mingcheng">马可波罗釉面</li>
+        <li><span class="redb">￥40</span></li>
+      </ul>
+    </div>
+    <div class="sdheshang" id="b8">
+      <div class="tuominghong">9</div>
+      <div class="touming">
+        <ul>
+          <li><a href="http://shop.aiju.com/p33722.shtml" class="oranger_link"><strong>马可波罗釉面砖-1295</strong></a></li>
+        </ul>
+      </div>
+      <dl class="rexiao_paihang">
+        <dt> <a href="http://shop.aiju.com/p33722.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2011/0617/150x150_1308294199_pdt_17t5.jpg" width="67" height="68" /></a></dt>
+        <dd>
+          <p ><span class="gary94 xiahua">￥40元</span></p>
+          <p><span class="redb">￥40元</span></p>
+          <p >已售出<span class="orange"> 800 </span>件</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="clear"></div>
+          <div class="yincang" id="a9" onMouseOver="leo(this,document.getElementById('b9'))">
+      <ul>
+        <li class="a">10</li>
+        <li class="yincang_mingcheng">佛罗伦萨-拉</li>
+        <li><span class="redb">￥90</span></li>
+      </ul>
+    </div>
+    <div class="sdheshang" id="b9">
+      <div class="tuominghong">10</div>
+      <div class="touming">
+        <ul>
+          <li><a href="http://shop.aiju.com/p35483.shtml" class="oranger_link"><strong>佛罗伦萨-拉斐尔系列-R</strong></a></li>
+        </ul>
+      </div>
+      <dl class="rexiao_paihang">
+        <dt> <a href="http://shop.aiju.com/p35483.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2011/0812/150x150_1313134789_pdt_lbz0.jpg" width="67" height="68" /></a></dt>
+        <dd>
+          <p ><span class="gary94 xiahua">￥125元</span></p>
+          <p><span class="redb">￥90元</span></p>
+          <p >已售出<span class="orange"> 800 </span>件</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="clear"></div>
+        <script language="javascript">
+									function leo(a,b,c){
+										a.style.display='none';
+										b.style.display='block';
+										var li=a.parentNode.childNodes;
+										for(var i=0;i<li.length;i++){
+											if(li[i]!=b&&li[i].nodeName.toLowerCase().indexOf("div")>=0&&li[i].id.indexOf("b")==0){
+												if(!c) {
+													document.getElementById("nianrui1").style.display="none";
+													document.getElementById("nianrui2").style.display="block";
+												}
+												li[i].style.display="none";
+												if(!c) {
+													document.getElementById("a"+li[i].id.slice(1)).style.display="block";
+												}else{
+													document.getElementById("nianrui1").style.display="block";
+													document.getElementById("a"+li[i].id.slice(1)).style.display="block";
+												}
+											}
+										}
+									}
+									</script>
+  </div>
+</div>
+<div class="shangpin_ph">
+  <h4>商城关注商品排行</h4>
+
+
+
+ <div class="shangpin_ph_list">
+  <table border="0" cellspacing="0" cellpadding="0" width="94%" class="shangpin_ph_list_top">
+    <tr>
+      <th width="20%" align="center" valign="middle" height="28">排行</th>
+      <th width="61%" align="center" valign="middle" height="28">商品</th>
+      <th width="19%" align="center" valign="middle" height="28">商城价</th>
+    </tr>
+  </table>
+    <div class="yincang" style="display:none" id="nianrui4" onMouseOver="leo1(this,document.getElementById('nianrui3'),true)">
+  <ul>
+    <li class="a">1</li>
+    <li class="yincang_mingcheng">宝隆抗菌散热</li>
+    <li><span class="redb">￥55.4</span></li>
+  </ul>
+</div>
+<div class="sdheshang" style="display:block" id="nianrui3">
+  <div class="tuominghong">1</div>
+  <div class="touming">
+    <ul>
+      <li><a href="http://shop.aiju.com/p20549.shtml" class="oranger_link"><strong>宝隆抗菌散热器／暖气-经</strong></a></li>
+    </ul>
+  </div>
+  <dl class="rexiao_paihang">
+    <dt> <a href="http://shop.aiju.com/p20549.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/1116/150x150_1258343473_pdt_wwpz.png" width="67" height="68" /></a></dt>
+    <dd>
+      <p ><span class="gary94 xiahua">￥129元</span></p>
+      <p><span class="redb">￥55.4元</span></p>
+      <p >已售出<span class="redb"> 636 </span>件</p>
+    </dd>
+  </dl>
+</div>
+<div class="clear"></div>
+  <div class="yincang" id="c1" onMouseOver="leo1(this,document.getElementById('d1'))">
+  <ul>
+    <li class="a">2</li>
+    <li class="yincang_mingcheng">恋伊LY98</li>
+    <li><span class="redb">￥451.9</span></li>
+  </ul>
+</div>
+<div class="sdheshang" id="d1">
+  <div class="tuominghong">2</div>
+  <div class="touming">
+    <ul>
+      <li><a href="http://shop.aiju.com/p20707.shtml" class="oranger_link"><strong>恋伊LY983豪华系列升</strong></a></li>
+    </ul>
+  </div>
+  <dl class="rexiao_paihang">
+    <dt> <a href="http://shop.aiju.com/p20707.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2010/0625/150x150_1277458195_adm_cp1a.jpg" width="67" height="68" /></a></dt>
+    <dd>
+      <p ><span class="gary94 xiahua">￥538元</span></p>
+      <p><span class="redb">￥451.9元</span></p>
+      <p >已售出<span class="redb"> 513 </span>件</p>
+    </dd>
+  </dl>
+</div>
+<div class="clear"></div>
+  <div class="yincang" id="c2" onMouseOver="leo1(this,document.getElementById('d2'))">
+  <ul>
+    <li class="a">3</li>
+    <li class="yincang_mingcheng">方太-五腔驱</li>
+    <li><span class="redb">￥2658</span></li>
+  </ul>
+</div>
+<div class="sdheshang" id="d2">
+  <div class="tuominghong">3</div>
+  <div class="touming">
+    <ul>
+      <li><a href="http://shop.aiju.com/p20728.shtml" class="oranger_link"><strong>方太-五腔驱动系列-嵌入</strong></a></li>
+    </ul>
+  </div>
+  <dl class="rexiao_paihang">
+    <dt> <a href="http://shop.aiju.com/p20728.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/0717/150x150_1247794153_pdt_w31s.png" width="67" height="68" /></a></dt>
+    <dd>
+      <p ><span class="gary94 xiahua">￥2658元</span></p>
+      <p><span class="redb">￥2658元</span></p>
+      <p >已售出<span class="redb"> 413 </span>件</p>
+    </dd>
+  </dl>
+</div>
+<div class="clear"></div>
+  <div class="yincang" id="c3" onMouseOver="leo1(this,document.getElementById('d3'))">
+  <ul>
+    <li class="a">4</li>
+    <li class="yincang_mingcheng">方太-聚能衡</li>
+    <li><span class="redb">￥1698</span></li>
+  </ul>
+</div>
+<div class="sdheshang" id="d3">
+  <div class="tuominghong">4</div>
+  <div class="touming">
+    <ul>
+      <li><a href="http://shop.aiju.com/p20737.shtml" class="oranger_link"><strong>方太-聚能衡控系列-嵌入</strong></a></li>
+    </ul>
+  </div>
+  <dl class="rexiao_paihang">
+    <dt> <a href="http://shop.aiju.com/p20737.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/0717/150x150_1247795630_pdt_vng0.png" width="67" height="68" /></a></dt>
+    <dd>
+      <p ><span class="gary94 xiahua">￥1798元</span></p>
+      <p><span class="redb">￥1698元</span></p>
+      <p >已售出<span class="redb"> 441 </span>件</p>
+    </dd>
+  </dl>
+</div>
+<div class="clear"></div>
+  <div class="yincang" id="c4" onMouseOver="leo1(this,document.getElementById('d4'))">
+  <ul>
+    <li class="a">5</li>
+    <li class="yincang_mingcheng">蒙娜丽莎-墙</li>
+    <li><span class="redb">￥20.4</span></li>
+  </ul>
+</div>
+<div class="sdheshang" id="d4">
+  <div class="tuominghong">5</div>
+  <div class="touming">
+    <ul>
+      <li><a href="http://shop.aiju.com/p20739.shtml" class="oranger_link"><strong>蒙娜丽莎-墙砖系列-DJ</strong></a></li>
+    </ul>
+  </div>
+  <dl class="rexiao_paihang">
+    <dt> <a href="http://shop.aiju.com/p20739.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/1109/150x150_1257734926_pdt_26aq.png" width="67" height="68" /></a></dt>
+    <dd>
+      <p ><span class="gary94 xiahua">￥24元</span></p>
+      <p><span class="redb">￥20.4元</span></p>
+      <p >已售出<span class="redb"> 720 </span>件</p>
+    </dd>
+  </dl>
+</div>
+<div class="clear"></div>
+  <div class="yincang" id="c5" onMouseOver="leo1(this,document.getElementById('d5'))">
+  <ul>
+    <li class="a">6</li>
+    <li class="yincang_mingcheng">法恩莎座便器</li>
+    <li><span class="redb">￥1888</span></li>
+  </ul>
+</div>
+<div class="sdheshang" id="d5">
+  <div class="tuominghong">6</div>
+  <div class="touming">
+    <ul>
+      <li><a href="http://shop.aiju.com/p20679.shtml" class="oranger_link"><strong>法恩莎座便器／马桶FB1</strong></a></li>
+    </ul>
+  </div>
+  <dl class="rexiao_paihang">
+    <dt> <a href="http://shop.aiju.com/p20679.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/0716/150x150_1247736891_pdt_qbye.png" width="67" height="68" /></a></dt>
+    <dd>
+      <p ><span class="gary94 xiahua">￥2697元</span></p>
+      <p><span class="redb">￥1888元</span></p>
+      <p >已售出<span class="redb"> 534 </span>件</p>
+    </dd>
+  </dl>
+</div>
+<div class="clear"></div>
+  <div class="yincang" id="c6" onMouseOver="leo1(this,document.getElementById('d6'))">
+  <ul>
+    <li class="a">7</li>
+    <li class="yincang_mingcheng">宝隆抗菌散热</li>
+    <li><span class="redb">￥68.9</span></li>
+  </ul>
+</div>
+<div class="sdheshang" id="d6">
+  <div class="tuominghong">7</div>
+  <div class="touming">
+    <ul>
+      <li><a href="http://shop.aiju.com/p20479.shtml" class="oranger_link"><strong>宝隆抗菌散热器／暖气-阳</strong></a></li>
+    </ul>
+  </div>
+  <dl class="rexiao_paihang">
+    <dt> <a href="http://shop.aiju.com/p20479.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/1116/150x150_1258348317_pdt_mx91.png" width="67" height="68" /></a></dt>
+    <dd>
+      <p ><span class="gary94 xiahua">￥160元</span></p>
+      <p><span class="redb">￥68.9元</span></p>
+      <p >已售出<span class="redb"> 775 </span>件</p>
+    </dd>
+  </dl>
+</div>
+<div class="clear"></div>
+  <div class="yincang" id="c7" onMouseOver="leo1(this,document.getElementById('d7'))">
+  <ul>
+    <li class="a">8</li>
+    <li class="yincang_mingcheng">诺贝尔-60</li>
+    <li><span class="redb">￥90.3</span></li>
+  </ul>
+</div>
+<div class="sdheshang" id="d7">
+  <div class="tuominghong">8</div>
+  <div class="touming">
+    <ul>
+      <li><a href="http://shop.aiju.com/p20480.shtml" class="oranger_link"><strong>诺贝尔-60系列-地砖F</strong></a></li>
+    </ul>
+  </div>
+  <dl class="rexiao_paihang">
+    <dt> <a href="http://shop.aiju.com/p20480.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/0713/150x150_1247485109_pdt_5rkc.png" width="67" height="68" /></a></dt>
+    <dd>
+      <p ><span class="gary94 xiahua">￥132.8元</span></p>
+      <p><span class="redb">￥90.3元</span></p>
+      <p >已售出<span class="redb"> 361 </span>件</p>
+    </dd>
+  </dl>
+</div>
+<div class="clear"></div>
+  <div class="yincang" id="c8" onMouseOver="leo1(this,document.getElementById('d8'))">
+  <ul>
+    <li class="a">9</li>
+    <li class="yincang_mingcheng">鳄鱼（20k</li>
+    <li><span class="redb">￥1606.4</span></li>
+  </ul>
+</div>
+<div class="sdheshang" id="d8">
+  <div class="tuominghong">9</div>
+  <div class="touming">
+    <ul>
+      <li><a href="http://shop.aiju.com/p31413.shtml" class="oranger_link"><strong>鳄鱼（20kg）彩妆内墙</strong></a></li>
+    </ul>
+  </div>
+  <dl class="rexiao_paihang">
+    <dt> <a href="http://shop.aiju.com/p31413.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2010/0723/150x150_1279874648_pdt_rs31.jpg" width="67" height="68" /></a></dt>
+    <dd>
+      <p ><span class="gary94 xiahua">￥2008元</span></p>
+      <p><span class="redb">￥1606.4元</span></p>
+      <p >已售出<span class="redb"> 348 </span>件</p>
+    </dd>
+  </dl>
+</div>
+<div class="clear"></div>
+  <div class="yincang" id="c9" onMouseOver="leo1(this,document.getElementById('d9'))">
+  <ul>
+    <li class="a">10</li>
+    <li class="yincang_mingcheng">诺贝尔-90</li>
+    <li><span class="redb">￥38.4</span></li>
+  </ul>
+</div>
+<div class="sdheshang" id="d9">
+  <div class="tuominghong">10</div>
+  <div class="touming">
+    <ul>
+      <li><a href="http://shop.aiju.com/p20635.shtml" class="oranger_link"><strong>诺贝尔-90系列-地砖T</strong></a></li>
+    </ul>
+  </div>
+  <dl class="rexiao_paihang">
+    <dt> <a href="http://shop.aiju.com/p20635.shtml"  target="_top"><img src="http://p1.up.aijuzhe.com/1011/2009/0715/150x150_1247648193_pdt_mr3u.png" width="67" height="68" /></a></dt>
+    <dd>
+      <p ><span class="gary94 xiahua">￥59.2元</span></p>
+      <p><span class="redb">￥38.4元</span></p>
+      <p >已售出<span class="redb"> 411 </span>件</p>
+    </dd>
+  </dl>
+</div>
+<div class="clear"></div>
+<script language="javascript">
+	function leo1(a,b,c){
+		a.style.display='none';
+		b.style.display='block';
+		var li=a.parentNode.childNodes;
+		for(var i=0;i<li.length;i++){
+			if(li[i]!=b&&li[i].nodeName.toLowerCase().indexOf("div")>=0&&li[i].id.indexOf("d")==0){
+				if(!c) {
+					document.getElementById("nianrui3").style.display="none";
+					document.getElementById("nianrui4").style.display="block";
+				}
+				li[i].style.display="none";
+				if(!c) {
+					document.getElementById("c"+li[i].id.slice(1)).style.display="block";
+				}else{
+					document.getElementById("nianrui3").style.display="block";
+					document.getElementById("c"+li[i].id.slice(1)).style.display="block";
+				}
+			}
+		}
+	}
+</script>
+
+
+
+</div>
+</div>
+</div>
+<!--左侧结束-->            <!--左侧结束-->
+            <!--右侧开始-->
+            <div class="sc_right">
+            	<div class="xgsp_box"><p class="sysp_text">所有商品 > <!-- <a href="" class="oranger_link"> -->装修建材<!-- </a> --> > <!-- <a href="" class="oranger_link"> -->橱柜<!-- </a> --> </p><p class="xgsp_jian"><!--相关商品<span class="orangeb">6000</span>件--></p></div>
+                <ul class="sc_xuanze">
+                	<li class="cpzt"><b>产品状态：</b></li>
+                    <li><a href="http://shop.aiju.com/chugui/" class="quanbu">全部</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/1/" class="quanbu_1">促销</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/2/" class="quanbu_1">新品上架</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/3/" class="quanbu_1">新品推荐</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/4/" class="quanbu_1">热销商品</a></li>
+					                </ul>
+                 <ul class="sc_xuanze">
+                	<li class="cpzt"><b>橱柜品牌：</b></li>
+                    <li><a href="http://shop.aiju.com/chugui/" class="quanbu">全部</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/haojiayi/" class="quanbu_1">好佳益</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/zhibang/" class="quanbu_1">志邦</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/desilang/" class="quanbu_1">德斯朗</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/haosaier/" class="quanbu_1">豪赛尔</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/pulemei/" class="quanbu_1">普乐美</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/nide/" class="quanbu_1">尼德</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/huida/" class="quanbu_1">惠达</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/yuxiang/" class="quanbu_1">御象</a></li>
+					                    <li><a href="http://shop.aiju.com/chugui/xingyiwenkang/" class="quanbu_1">星艺温康</a></li>
+					                </ul>
+                <ul class="anxuqiu_zs">
+                	<li><a href="http://shop.aiju.com/chugui/" class="ansp_zs">按商品展示</a></li>
+                    <li class="anxuqiu_zs_dp"><a href="http://shop.aiju.com/shopshow28.html" class="ansp_dp">按店铺展示</a></li>
+                </ul>
+				<script language="javascript">
+				function postSubmit() {
+					document.form8.submit();
+				}
+				</script>
+				<form name="form8"  id="form8" action="shop_product.php" method="get">
+				<input type="hidden" name="classid" id="classid" value="28" />
+                <div class="sc_ss_box">
+                	<select class="sc_ss_box_time" name="order" onchange="postSubmit();">
+                        <option value=""  selected="selected">上架时间</option>
+                        <option value="1" >价格从高到低</option>
+                        <option value="2" >价格从低到高</option>
+                    </select>
+                    <input type="text" name="title" value=""  class="sc_ss_box_text"/>
+                    <input type="button" value="搜索" name="" class="sc_ss_box_button"  onclick="postSubmit();"/>
+                </div>
+				</form>
+                <div class="sc_lb_list">
+                	<ul class="sc_zs_list">
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p35945.shtml"><img src="http://p1.up.aijuzhe.com/1011/2012/0620/150x150_1340163765_pdt_buia.jpg" width="151" height="151" alt='志邦-【花样年华】整体厨柜' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p35945.shtml" class="shangpin_mc">志邦-【花样年华】整体厨柜</a>
+                                    <p><span class="gary94 xiahua">￥12590</span>   <span class="redb">￥12590</span></p>
+                                    <p>已有<span class="orange">0 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p35185.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0810/150x150_1312942866_pdt_xtb5.jpg" width="151" height="151" alt='志邦厨饰-花样年华-名仕系列（柜体+台面）' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p35185.shtml" class="shangpin_mc">志邦厨饰-花样年华-名仕系列（柜体+台面）</a>
+                                    <p><span class="gary94 xiahua">￥2880</span>   <span class="redb">￥2880</span></p>
+                                    <p>已有<span class="orange">702 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p35184.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0810/150x150_1312943063_pdt_60r2.jpg" width="151" height="151" alt='志邦厨饰-香奈儿-名仕系列（柜体+台面）' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p35184.shtml" class="shangpin_mc">志邦厨饰-香奈儿-名仕系列（柜体+台面）</a>
+                                    <p><span class="gary94 xiahua">￥4460</span>   <span class="redb">￥4460</span></p>
+                                    <p>已有<span class="orange">547 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p35183.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0809/150x150_1312883256_pdt_01s4.jpg" width="151" height="151" alt='志邦厨饰-罗马时光套餐（3米地柜+3米台面（人造石）+1米吊柜+zbom烟机灶具）' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p35183.shtml" class="shangpin_mc">志邦厨饰-罗马时光套餐（3米地柜+3米台面（人造</a>
+                                    <p><span class="gary94 xiahua">￥10800</span>   <span class="redb">￥10800</span></p>
+                                    <p>已有<span class="orange">410 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p35182.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0809/150x150_1312882415_pdt_84rj.jpg" width="151" height="151" alt='志邦厨饰-米兰印象套餐（3米地柜+3米台面（人造石）+1米吊柜+zbom烟机灶具）' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p35182.shtml" class="shangpin_mc">志邦厨饰-米兰印象套餐（3米地柜+3米台面（人造</a>
+                                    <p><span class="gary94 xiahua">￥12800</span>   <span class="redb">￥12800</span></p>
+                                    <p>已有<span class="orange">420 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34911.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0728/150x150_1311844757_pdt_w66f.jpg" width="151" height="151" alt='尼德橱柜-朋克时代系列-双面金属拉丝面板' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34911.shtml" class="shangpin_mc">尼德橱柜-朋克时代系列-双面金属拉丝面板</a>
+                                    <p><span class="gary94 xiahua">￥3170</span>   <span class="redb">￥2377.5</span></p>
+                                    <p>已有<span class="orange">356 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34914.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0728/150x150_1311845394_pdt_04l0.jpg" width="151" height="151" alt='尼德橱柜-魅舞系列-幻彩金箔板' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34914.shtml" class="shangpin_mc">尼德橱柜-魅舞系列-幻彩金箔板</a>
+                                    <p><span class="gary94 xiahua">￥3150</span>   <span class="redb">￥2362.5</span></p>
+                                    <p>已有<span class="orange">536 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34916.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0728/150x150_1311845745_pdt_eq9j.jpg" width="151" height="151" alt='尼德橱柜-魅舞系列-进口PVC全包覆吸塑' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34916.shtml" class="shangpin_mc">尼德橱柜-魅舞系列-进口PVC全包覆吸塑</a>
+                                    <p><span class="gary94 xiahua">￥3130</span>   <span class="redb">￥2347.5</span></p>
+                                    <p>已有<span class="orange">375 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34924.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0728/150x150_1311846245_pdt_8x3d.jpg" width="151" height="151" alt='尼德橱柜-浪漫满屋系列-绒面双饰面板' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34924.shtml" class="shangpin_mc">尼德橱柜-浪漫满屋系列-绒面双饰面板</a>
+                                    <p><span class="gary94 xiahua">￥2620</span>   <span class="redb">￥1965</span></p>
+                                    <p>已有<span class="orange">384 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34928.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0728/150x150_1311846497_pdt_a3xp.jpg" width="151" height="151" alt='尼德橱柜-夜曲系列-瓦楞面板' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34928.shtml" class="shangpin_mc">尼德橱柜-夜曲系列-瓦楞面板</a>
+                                    <p><span class="gary94 xiahua">￥2190</span>   <span class="redb">￥1642.5</span></p>
+                                    <p>已有<span class="orange">766 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34884.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0728/150x150_1311841645_pdt_59vo.jpg" width="151" height="151" alt='尼德橱柜-实木复合+手绘-梦回唐朝系列' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34884.shtml" class="shangpin_mc">尼德橱柜-实木复合+手绘-梦回唐朝系列</a>
+                                    <p><span class="gary94 xiahua">￥6699</span>   <span class="redb">￥5024.3</span></p>
+                                    <p>已有<span class="orange">348 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34786.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0729/150x150_1311911566_pdt_trjp.jpg" width="151" height="151" alt='普乐美-JS201+701113+PD16套餐（双槽750*430*200mm）' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34786.shtml" class="shangpin_mc">普乐美-JS201+701113+PD16套餐（</a>
+                                    <p><span class="gary94 xiahua">￥1867</span>   <span class="redb">￥1200</span></p>
+                                    <p>已有<span class="orange">727 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34892.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0728/150x150_1311842430_pdt_c2ou.jpg" width="151" height="151" alt='尼德橱柜-美式原木门板-罗马假日系列' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34892.shtml" class="shangpin_mc">尼德橱柜-美式原木门板-罗马假日系列</a>
+                                    <p><span class="gary94 xiahua">￥6380</span>   <span class="redb">￥4785</span></p>
+                                    <p>已有<span class="orange">490 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34900.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0728/150x150_1311843688_pdt_ly5x.jpg" width="151" height="151" alt='尼德橱柜-苏格兰1782系列-实木复合+铝合金波浪板' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34900.shtml" class="shangpin_mc">尼德橱柜-苏格兰1782系列-实木复合+铝合金波</a>
+                                    <p><span class="gary94 xiahua">￥4800</span>   <span class="redb">￥3600</span></p>
+                                    <p>已有<span class="orange">342 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34930.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0728/150x150_1311847204_pdt_hlrj.jpg" width="151" height="151" alt='尼德橱柜-快意人生系列-进口双面同色烤漆' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34930.shtml" class="shangpin_mc">尼德橱柜-快意人生系列-进口双面同色烤漆</a>
+                                    <p><span class="gary94 xiahua">￥3600</span>   <span class="redb">￥2700</span></p>
+                                    <p>已有<span class="orange">715 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34931.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0728/150x150_1311847427_pdt_a9d7.jpg" width="151" height="151" alt='尼德橱柜-卡布奇诺系列-UV漆' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34931.shtml" class="shangpin_mc">尼德橱柜-卡布奇诺系列-UV漆</a>
+                                    <p><span class="gary94 xiahua">￥2850</span>   <span class="redb">￥2137.5</span></p>
+                                    <p>已有<span class="orange">638 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34905.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0728/150x150_1311844240_pdt_qmmx.jpg" width="151" height="151" alt='尼德橱柜-新食尚煮逸系列-暗纹碳花板' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34905.shtml" class="shangpin_mc">尼德橱柜-新食尚煮逸系列-暗纹碳花板</a>
+                                    <p><span class="gary94 xiahua">￥3850</span>   <span class="redb">￥2887.5</span></p>
+                                    <p>已有<span class="orange">652 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34630.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0726/150x150_1311662997_pdt_z6b4.gif" width="151" height="151" alt='惠达-水槽-HD8830SC' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34630.shtml" class="shangpin_mc">惠达-水槽-HD8830SC</a>
+                                    <p><span class="gary94 xiahua">￥3625</span>   <span class="redb">￥2537.5</span></p>
+                                    <p>已有<span class="orange">590 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34627.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0726/150x150_1311662479_pdt_o2kp.gif" width="151" height="151" alt='惠达-水槽-HD8702SC' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34627.shtml" class="shangpin_mc">惠达-水槽-HD8702SC</a>
+                                    <p><span class="gary94 xiahua">￥1975</span>   <span class="redb">￥1382.5</span></p>
+                                    <p>已有<span class="orange">409 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p34629.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0726/150x150_1311662762_pdt_qzmx.gif" width="151" height="151" alt='惠达-水槽-HD8822SC' onerror="this.src='http://img.sys.aiju.com/shop2011/150x150_product_default.png'"/></a>
+                                	                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p34629.shtml" class="shangpin_mc">惠达-水槽-HD8822SC</a>
+                                    <p><span class="gary94 xiahua">￥2075</span>   <span class="redb">￥1452.5</span></p>
+                                    <p>已有<span class="orange">546 </span>人购买 |<span class="orange"> 0</span>人评价</p>
+                                </dd>
+                            </dl>
+                        </li>
+					
+
+
+                    </ul>
+                </div>
+                <!--翻页开始-->
+                  <div class="yhq_page">
+                	<ul>
+                	<li><a href="?page=1/chugui/list_0_0" class='shangyy'>上一页</a> </li>
+				<li><a class='dangqian'>1</a></li><li><a href=/chugui/list_0_0_2.html class='qita'>2</a>&nbsp;</li><li><a href=/chugui/list_0_0_3.html class='qita'>3</a>&nbsp;</li><li><a href=/chugui/list_0_0_4.html class='qita'>4</a>&nbsp;</li><li><a href=/chugui/list_0_0_5.html class='qita'>5</a>&nbsp;</li><li><a href=/chugui/list_0_0_6.html class='qita'>6</a>&nbsp;</li><li><a href=/chugui/list_0_0_7.html class='qita'>7</a>&nbsp;</li><li><a href=/chugui/list_0_0_8.html class='qita'>8</a>&nbsp;</li><li><a href=/chugui/list_0_0_9.html class='qita'>9</a>&nbsp;</li><li><a href=/chugui/list_0_0_10.html class='qita'>10</a>&nbsp;</li><li><a href=/chugui/list_0_0_11.html class='qita'>&gt;&gt;</a></li> 
+				<li><a href="?page=2/chugui/list_0_0" class='xiayiye'>下一页</a> </li>
+					</ul>
+                </div>
+                <!--翻页结束-->
+                <div class="pinpaiqij" style="margin-bottom:10px;">
+                	<div class="pinpaiqij_top"><h4>品牌旗舰店热卖</h4></div>
+                    <ul class="pinpaiqij_list">
+                    	                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p32463.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0415/150x150_1302861708_pdt_mznk.jpg" width="165" height="155" alt='普乐美-单盆不锈钢厨盆-吉森系列-JS208（500*430*200mm）'/></a>
+
+                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p32463.shtml" class="shangpin_mc">普乐美-单盆不锈钢厨盆-吉森系列-JS208（5</a>
+                                    <p><span class="gary94 xiahua">￥760</span>   <span class="redb">￥684</span></p>
+
+                                </dd>
+                            </dl>
+                        </li>
+
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p32415.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0415/150x150_1302858744_pdt_hxq1.jpg" width="165" height="155" alt='普乐美-水槽-不莱梅系列-BM604-带垃圾筒的双槽不锈钢厨盆（880*480*185mm）'/></a>
+
+                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p32415.shtml" class="shangpin_mc">普乐美-水槽-不莱梅系列-BM604-带垃圾筒的</a>
+                                    <p><span class="gary94 xiahua">￥2800</span>   <span class="redb">￥2520</span></p>
+
+                                </dd>
+                            </dl>
+                        </li>
+
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p32333.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0415/150x150_1302854053_pdt_hqda.jpg" width="165" height="155" alt='普乐美-水槽-克虏勃系列系列-KB153-方形单盆方下水台控斜边厨盆(直角盆胆)（760*510*200mm）'/></a>
+
+                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p32333.shtml" class="shangpin_mc">普乐美-水槽-克虏勃系列系列-KB153-方形单</a>
+                                    <p><span class="gary94 xiahua">￥5688</span>   <span class="redb">￥5119</span></p>
+
+                                </dd>
+                            </dl>
+                        </li>
+
+					                    	<li>
+                        	<dl>
+                            	<dt class="sc_lb_list_pic"><a href="http://shop.aiju.com/p32453.shtml"><img src="http://p1.up.aijuzhe.com/1011/2011/0415/150x150_1302861025_pdt_udny.jpg" width="165" height="155" alt='普乐美-面盆龙头-70502P'/></a>
+
+                                </dt>
+                                <dd>
+                                	<a href="http://shop.aiju.com/p32453.shtml" class="shangpin_mc">普乐美-面盆龙头-70502P</a>
+                                    <p><span class="gary94 xiahua">￥508</span>   <span class="redb">￥457</span></p>
+
+                                </dd>
+                            </dl>
+                        </li>
+
+					                    </ul>
+                </div>
+            </div>
+            <!--右侧结束-->
+
+        </div>
+        <!--内容结束-->
+        <!--底部信息开始-->
+                 <!--底部信息开始-->
+        <div class="footer">
+        	<!--支付开始-->
+            <!--支付结束-->
+            <!--合作伙伴开始-->
+             <div class="hezuohuoban">
+             	<div class="hezuohuoban_cetent">
+                	<div class="partner">
+                    	<ul>
+                    	<li style="width:55px; padding-right:12px;"><img src="http://img.sys.aiju.com//shop2011/hzhb.jpg" width="55" height="55" /></li>
+                        <li style="width:112px;"><a href="http://www.cca.org.cn/" target="_blank"><img src="http://img.sys.aiju.com//shop2011/partner-1.jpg" width="112" height="33" /></a></li>
+                        <li style="width:117px;"><a href="http://www.chinaunionpay.com/" target="_blank"><img src="http://img.sys.aiju.com//shop2011/partner-2.jpg" width="117" height="33" /></a></li>
+                        <li style="width:114px;"><a href="http://webunion.ccd.com.cn/" target="_blank"><img src="http://img.sys.aiju.com//shop2011/partner-3.jpg" width="114" height="33" /></a></li>
+                        <li style="width:147px;"><a href="https://www.alipay.com/" target="_blank"><img src="http://img.sys.aiju.com//shop2011/partner-4.jpg" width="147" height="33" /></a></li>
+                        <li style="width:149px;"><a href="http://www.psbc.com/" target="_blank"><img src="http://img.sys.aiju.com//shop2011/partner-5.jpg" width="149" height="33" /></a></li>
+                        <li style="width:200px;"><a href="http://www.ccb.com" target="_blank"><img src="http://img.sys.aiju.com//shop2011/partner-6.jpg" width="200" height="33" /></a></li>
+                        </ul>
+                    </div>
+
+            <ul class="aiju_submenu">
+            	<li><a target="_blank" href="http://shop.aiju.com/" class="aiju_submenu_or">商城</a></li>
+                <li><a target="_blank" href="http://shop.aiju.com/cizhuan/" class="aiju_submenu_gr2">瓷砖</a></li>
+                <li><a target="_blank" href="http://shop.aiju.com/diban/" class="aiju_submenu_gr2">地板</a></li>
+<!--                 <li><a href="#" class="aiju_submenu_gr2">卫浴</a></li>
+ -->            <li><a target="_blank" href="http://shop.aiju.com/jieju/" class="aiju_submenu_gr2">洁具</a></li>
+<!--                 <li><a href="#" class="aiju_submenu_gr2">团购</a></li>
+ -->                <li><a target="_blank" href="http://shop.aiju.com/qunuanshebei/" class="aiju_submenu_gr2">取暖</a></li>
+                <li><a target="_blank" href="http://shop.aiju.com/chugui/" class="aiju_submenu_gr2">橱柜</a></li>
+                <li><a target="_blank" href="http://shop.aiju.com/shenghuodianqi/" class="aiju_submenu_gr2">电器</a></li>
+                <li><a target="_blank" href="http://shop.aiju.com/jiajushipin/" class="aiju_submenu_gr2">家饰</a></li>
+                <li><a target="_blank" href="http://shop.aiju.com/youqibizhi/" class="aiju_submenu_gr2">涂料</a></li>
+                <li><a target="_blank" href="http://zx.aiju.com/" class="aiju_submenu_or">装修</a></li>
+                <li><a target="_blank" href="http://zx.aiju.com/gongsi.html" class="aiju_submenu_gr2">装修公司</a></li>
+                <li><a target="_blank" href="http://zx.aiju.com/shigongdui.html" class="aiju_submenu_gr2">施工队</a></li>
+                <li><a target="_blank" href="http://zx.aiju.com/case/" class="aiju_submenu_or">案例</a></li>
+                <li><a target="_blank" href="http://zx.aiju.com/case/xiandai/" class="aiju_submenu_gr2">简约</a></li>
+                <li><a target="_blank" href="http://zx.aiju.com/case/oumei/" class="aiju_submenu_gr2">欧式</a></li>
+                <li><a target="_blank" href="http://zx.aiju.com/case/zhongshi/" class="aiju_submenu_gr2">中式</a></li>
+                <li><a target="_blank" href="http://zx.aiju.com/case/tianyuan/" class="aiju_submenu_gr2">田园</a></li>
+                <li><a target="_blank" href="http://wenba.aiju.com/" class="aiju_submenu_or">问吧</a></li>
+                <li><a target="_blank" href="http://bbs.aiju.com/" class="aiju_submenu_or">论坛</a></li>
+            </ul>
+                </div>
+             </div>
+            <!--合作伙伴结束-->
+            <!--联系我们-->
+            <div class="lianxiwomen">
+            	<ul class="lianxiwomen_list">
+                	<li><a href="http://www.aiju.com/help/wangzjj.shtml" class="shangpin_mc">关于我们</a></li>
+                    <li>|</li>
+                    <li><a href="http://shop.aiju.com/sitemap_new.php" class="shangpin_mc">网站地图</a></li>
+                    <li>|</li>
+                    <li><a href="http://www.aiju.com/help/zhaoshz.shtml" class="shangpin_mc">招商合作</a></li>
+                    <li>|</li>
+                    <li><a href="http://www.aiju.com/help/lianxwm.shtml" class="shangpin_mc">联系我们</a></li>
+                     <li>|</li>
+                    <li><a href="http://www.aiju.com/link.php" class="shangpin_mc">友情链接</a></li>
+                    <li>|</li>
+                    <li><a href="http://www.aiju.com/help/" class="shangpin_mc">帮助中心</a></li>
+					<li>|</li>
+                    <li><a href="http://www.aiju.com/help/zhaopin.shtml" class="shangpin_mc">诚聘英才</a></li>
+                </ul>
+                <p>公司地址：北京市西城区北三环中路29号院3号楼茅台大厦7层</p>
+                <p>公司电话：010-82092068     传真：010-82092092      邮编：100029 </p>
+                <p>Copyright@2009 版权所有 AIJU.COM 京ICP备09007511号 广告经营许可证：3301061000468 </p>
+                <p>咨询热线：<img src="http://img.sys.aiju.com//shop2011/aiju_tel.jpg" width="171" height="26"  align="absmiddle"/>(仅限北京用户)</p>
+            </div>
+            <!--联系我们结束-->
+        </div>
+        <!--底部信息结束-->
+    </div>
+    </div>
+
+<div style="display:none;">
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/5372228.js"></script>
+<noscript><a href="http://www.51.la/?5372228" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5372228.asp" style="border:none" /></a></noscript>
+<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-10469173-1");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+	<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd25f5c06d44b9b5d0aee477ebeaa9c08' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+<!-- WPA Button Begin -->
+<script charset="utf-8" type="text/javascript" src="http://static.b.qq.com/account/bizqq/js/wpa.js?wty=1&type=11&kfuin=800016616&ws=http%3A%2F%2Fwww.aiju.com%2F&title=%E7%88%B1%E5%B1%85%E8%80%85%20%E4%B8%8E%E7%88%B1%E5%90%8C%E5%B1%85&cot=%E5%8F%AA%E9%9C%80%E4%B8%80%E4%B8%AA%E7%94%B5%E8%AF%9D%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%B8%AE%E6%82%A8%E8%A7%A3%E5%86%B3%E8%A3%85%E4%BF%AE%E7%96%91%E9%97%AE%EF%BC%9A%0A010-82092096&btn1=%E8%A3%85%E4%BF%AE%E5%92%A8%E8%AF%A2&btn2=%E4%B8%8B%E6%AC%A1%E5%86%8D%E8%AF%B4&fsty=0&fposX=0&fposY=2&csty=7&tx=1&aty=0&a=&key=%5D8%045SfTaU%60%00%60Se%00h%02d%05%3AUoS4%099Q7%00gU1%0Ee%0C%3CVe"></script>
+<!-- WPA Button END -->
 </body>
-</html>
+</html>

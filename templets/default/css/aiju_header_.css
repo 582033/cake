@@ -50,7 +50,7 @@ top:0;
 	padding:0 8px 0 8px;
 }
 .loginbar .aiju_login_r .gsdh_tel{
-	background:url(http://img.sys.aiju.com/shop2011/9.26tel_pic.jpg) no-repeat 5px 3px;
+	background:url(../images/9.26tel_pic.jpg) no-repeat 5px 3px;
 	color:#d74e03;
 	font-weight:bold;
 	padding-left:25px;
@@ -80,7 +80,7 @@ top:0;
 .aiju_menu_box{
 	width:539px;
 	height:43px;
-	background:url(http://img.sys.aiju.com/shop2011//new_ss_bj1_bj.jpg) no-repeat left;
+	background:url(../images//new_ss_bj1_bj.jpg) no-repeat left;
 	overflow:hidden;
 	zoom:1;
 }
@@ -88,7 +88,7 @@ top:0;
 .aiju_menu_box2{
 	width:539px;
 	height:43px;
-	background:url(http://img.sys.aiju.com/shop2011/new_ss_bj2_bj.jpg) no-repeat left;
+	background:url(../images/new_ss_bj2_bj.jpg) no-repeat left;
 	overflow:hidden;
 	zoom:1;
 }
@@ -119,7 +119,7 @@ top:0;
 	height:43px;
 }
 .sousuo_button{
-	background:url(http://img.sys.aiju.com/shop2011/new_ss_button.jpg) no-repeat;
+	background:url(../images/new_ss_button.jpg) no-repeat;
 	border:none;
 	width:110px;
 	height:43px;
@@ -146,7 +146,7 @@ top:0;
 }
 /*代金券当前样式*/
 .dangqian_bq{
-	background:url(http://img.sys.aiju.com/shop2011/new_ss_bj1.jpg) no-repeat;
+	background:url(../images/new_ss_bj1.jpg) no-repeat;
 	width:65px;
 	height:23px;
 	color:#EB5C11;
@@ -173,7 +173,7 @@ a.dangqian_bq_mr:active{
 	height:23px;
 	text-align:center;
 	font-weight:bold;
-	background:url(http://img.sys.aiju.com/shop2011/new_ss_bj2.jpg) no-repeat;
+	background:url(../images/new_ss_bj2.jpg) no-repeat;
 	color:#EB5C11;
 }
 /*商品默认样式*/
@@ -219,7 +219,7 @@ a.qita_bq_mr:active{
 	font-weight:bold;
 	position:relative;
 	top:0;
-	background:url(http://img.sys.aiju.com/shop2011/dht_menubj.jpg) no-repeat;
+	background:url(../images/dht_menubj.jpg) no-repeat;
 }
 .dht ul li{
 	float:left;
@@ -234,7 +234,7 @@ a.qita_bq_mr:active{
 	text-align:center;
 }
 .dht_link{
-	background:url(http://img.sys.aiju.com/shop2011/menu_bj_jt.jpg) no-repeat;
+	background:url(../images/menu_bj_jt.jpg) no-repeat;
 	color:#fff116;
 }
 a.dht_link1:link,

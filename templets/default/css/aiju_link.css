@@ -56,22 +56,22 @@ a.qgzq_mingc:active{
 }
 .loginzhuce .zhuce_button a:link,
 .loginzhuce .zhuce_button a:visited{
-	background:url(http://img.sys.aiju.com/shop2011/zhuce1.jpg) no-repeat;
+	background:url(../images/zhuce1.jpg) no-repeat;
 	text-decoration:none;
 }
 .loginzhuce .zhuce_button a:hover,
 .loginzhuce .zhuce_button a:active{
-	background:url(http://img.sys.aiju.com/shop2011/zhuce.jpg) no-repeat;
+	background:url(../images/zhuce.jpg) no-repeat;
 	text-decoration:none;
 }
 .loginzhuce .denglu_button a:link,
 .loginzhuce .denglu_button a:visited{
-	background:url(http://img.sys.aiju.com/shop2011/denglu1.jpg) no-repeat;
+	background:url(../images/denglu1.jpg) no-repeat;
 	text-decoration:none;
 }
 .loginzhuce .denglu_button a:hover,
 .loginzhuce .denglu_button a:active{
-	background:url(http://img.sys.aiju.com/shop2011/denglu.jpg) no-repeat;
+	background:url(../images/denglu.jpg) no-repeat;
 	text-decoration:none;
 }
 
@@ -143,25 +143,25 @@ a.aiju_submenu_gr:active{
 }
 a.menu_link1:link,
 a.menu_link1:visited{
-	background:url(http://img.sys.aiju.com/shop2011/head_link_bj1.jpg) no-repeat;
+	background:url(../images/head_link_bj1.jpg) no-repeat;
 	color:#fff;
 	text-decoration:none;
 }
 a.menu_link1:hover,
 a.menu_link1:active{
-	background:url(http://img.sys.aiju.com/shop2011/head_link_bj1.jpg) no-repeat;
+	background:url(../images/head_link_bj1.jpg) no-repeat;
 	color:#fff;
 	text-decoration:none;
 }
 a.menu_link:link,
 a.menu_link:visited{
-	background:url(http://img.sys.aiju.com/shop2011/head_link_bj.jpg) no-repeat;
+	background:url(../images/head_link_bj.jpg) no-repeat;
 	color:#ec5e10;
 	text-decoration:none;
 }
 a.menu_link:hover,
 a.menu_link:active{
-	background:url(http://img.sys.aiju.com/shop2011/head_link_bj.jpg) no-repeat;
+	background:url(../images/head_link_bj.jpg) no-repeat;
 	color:#ec5e10;
 	text-decoration:none;
 }
