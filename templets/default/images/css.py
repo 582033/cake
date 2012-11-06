@@ -7,4 +7,4 @@ def css (url):
     for cs in css:
         os.system('wget ' + cs)
 
-css('http://shop.aiju.com/app/shop/css/aiju_sc_index.css')
+css('http://js.sys.aiju.com/jquery/jquery.treeview.css')

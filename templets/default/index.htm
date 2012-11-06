@@ -11,38 +11,6 @@
 <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/UrlUnit.js"></script>
 <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/simpleCart.js"></script>
 </head>
-
-<script language="javascript">
-//去左右空格
-function trim(s){
-	return rtrim(ltrim(s));
-};
-
-//去左空格
-function ltrim(s){
-	s = s.replace(/^　+| +/, " ");
-	return s.replace(/^\s*/, "");
-};
-
-//去右空格
-function rtrim(s) {
-	s = s.replace(/　+| +$/, " ");
-	return s.replace(/\s*$/, "");
-};
-//判断字符串是否为空
-function isEmpty(s) {
-	s = trim(s);
-	return s.length == 0;
-};
-function submitData1() {
-		var f = document.sreachdata;
-		if(isEmpty(f.keyword.value)){
-			alert("提示：请输入您要查找的关键字");
-			return false;
-		}
-		document.sreachdata.submit();
-	}
-</script>
 <body>
 	<div class="main950">
     	<!--头部开始-->
