@@ -19,6 +19,10 @@
 	float:left;
 	padding:10px 0 0 15px;
 }
+.daohang_text.span.a{
+	color:#1B5790;
+	text-decoration:none;
+}
 /*左侧开始*/
 .sc_left_menu{
 	width:230px;
@@ -87,6 +91,9 @@
 	float:right;
 	overflow:hidden;
 	zoom:1;
+	font-size:12px;
+	line-height:260%;
+	font-family:"宋体";
 }
 .xgsp_box{
 	height:33px;
@@ -411,3 +418,30 @@ border-left:none; border-right:none;}
 	border-bottom:1px #999 dotted;
 }
 /*展示js样式结束*/
+
+/*article start*/
+.sc_c_img{
+	width:160px;
+	height:160px;
+	margin:5px;
+	float:left;
+	border:1px #ffd9b4 solid;
+}
+.sc_c_r{
+	float:left;
+	width:480px;
+	height:140px;
+	margin:5px;
+	padding:10px 20px;
+}
+.sc_c_r span{
+	color:#949494;
+}
+.sc_hr {
+	width:640px;
+	float:left;
+	margin:5px;
+	padding:30px 5px;
+	border-top:1px #c7c7c7;
+}
+/*article end*/

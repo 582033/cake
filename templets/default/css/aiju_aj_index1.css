@@ -22,14 +22,14 @@
 /*第一部分开始*/
 .box1{
 	width:950px;
-	height:408px;
+	height:280px;
 	overflow:hidden;
 	zoom:1;
 }
 /*左侧菜单开始*/
 .left_menu{
 	width:230px;
-	height:408px;
+	height:280px;
 	float:left;
 }
 .left_menu_top{
@@ -48,7 +48,7 @@
 }
 .box1 .left_menu .tuijianpp{
 	width:228px;
-	height:366px;
+	height:234px;
 }
 .box1 .left_menu .tuijianpp h4{
 	color:#eb5c11;
@@ -139,7 +139,7 @@
 }
 .aiju_gonggao .aiju_gonggao_middle{
 	width:208px;
-	height:179px;
+	height:214px;
 }
 .aiju_gonggao .aiju_gonggao_middle ul li{
 	padding:3px 0 0 15px;
@@ -444,12 +444,29 @@ text-align:center;
 }
 /*菜单class*/
 .zxzx_Menubox {
-width:948px;
-background: url(../images/zxzx_bj.jpg) repeat-x;;
-height:29px;
-line-height:29px;
-border:1px #dddddd solid;
-border-bottom:none;
+	width:948px;
+	background: url(../images/zxzx_bj.jpg) repeat-x;;
+	height:29px;
+	line-height:29px;
+	border:1px #dddddd solid;
+	border-bottom:none;
+}
+.zxzx_Menubox_left {
+	width:230px;
+	background: url(../images/zxzx_bj.jpg) repeat-x;;
+	height:29px;
+	line-height:29px;
+	border:1px #dddddd solid;
+	border-bottom:none;
+}
+.zxzx_Menubox_left .orange{
+	color:#ff6500;
+	margin-left:10px;
+}
+.zxzx_Menubox_left .left_list{
+	border:1px #dddddd solid;
+	width:210px;
+	padding:10px;
 }
 .zxzx_Menubox h3{
 	width:100px;

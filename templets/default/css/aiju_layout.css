@@ -3,6 +3,7 @@
 *{
 	margin:0 auto;
 	padding:0;
+	text-decoration:none;
 }
 body{
 	font-size:12px;
@@ -97,7 +98,7 @@ line-height:13.5pt;
 }
 .my_left_category .my_left_cat_list h2 {
 margin:0px;
-padding:3px 5px 0px 18px;
+padding:3px 5px 0px 38px;
 }
 .my_left_category .my_left_cat_list h2 a {
 color:#d6290b;
@@ -339,4 +340,79 @@ a.menu_link_ga:active{
 	height:38px;
 	float:right;
 	margin:65px 60px 0 0;
+}
+
+.gongsi_tj{
+	width:710px;
+	margin-bottom:10px;
+}
+.gongsi_tj_top{
+	width:710px;
+	height:30px;
+	background:url(http://img.sys.aiju.com/shop2011/jz_box_top.jpg) no-repeat;
+}
+
+.gongsi_tj_top h4{
+	color:#fff;
+	padding-left:10px;
+	width:200px;
+	float:left;
+	margin-top:3px;
+}
+.gongsi_tj_top p{
+	width:300px;
+	text-align:right;
+	float:right;
+	padding-right:10px;
+}
+.gongsi_tj_top .gs_tj_qb{
+	color:#333;
+	text-decoration:underline;
+	margin-left:20px;
+}
+.gongsi_tj_top .orangeb{
+	font-size:14px;
+}
+.gongsi_tj_bottom{
+	width:708px;
+	border:1px #ffd9b3 solid;
+	border-top:none;
+}
+.gongsi_tj_left{
+	width:400px;
+	overflow:hidden;
+	margin-left:10px;
+	float:left;
+	_margin-left:5px;
+}
+.gongsi_tj_right{
+	width:708px;
+	border:1px #ffd9b3 solid;
+	background-color:#fffbed;
+	float:right;
+	overflow:hidden;
+}
+.gongsi_tj_right ul li{
+	background:url(http://img.sys.aiju.com/shop2011/gec_point.jpg)  no-repeat left 17px;
+	width:690px;
+	padding-left:10px;
+		overflow:hidden;
+	zoom:1;
+	border-bottom:1px #ababab dotted;
+	height:36px;
+	line-height:36px;
+	_height:35px;
+	line-height:35px;
+}
+.gongsi_tj_right .shangpin_mc{
+	width:170px;
+	float:left;
+	overflow:hidden;
+}
+.gongsi_tj_right p{
+	float:right;
+	text-align:left;
+}
+.gongsi_tj_right .gongsi_tj_2{
+	border-bottom:none;
 }

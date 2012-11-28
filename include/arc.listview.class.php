@@ -972,8 +972,8 @@ class ListView
         //获得上一页和主页的链接
         if($this->PageNo != 1)
         {
-            $prepage.="<li><a href='".str_replace("{page}",$prepagenum,$tnamerule)."'>上一页</a></li>\r\n";
-            $indexpage="<li><a href='".str_replace("{page}",1,$tnamerule)."'>首页</a></li>\r\n";
+            $prepage.="<li><a class='shangyy' href='".str_replace("{page}",$prepagenum,$tnamerule)."'>上一页</a></li>\r\n";
+            $indexpage="<li><a class='shangyy' href='".str_replace("{page}",1,$tnamerule)."'>首页</a></li>\r\n";
         }
         else
         {
@@ -983,8 +983,8 @@ class ListView
         //下一页,未页的链接
         if($this->PageNo!=$totalpage && $totalpage>1)
         {
-            $nextpage.="<li><a href='".str_replace("{page}",$nextpagenum,$tnamerule)."'>下一页</a></li>\r\n";
-            $endpage="<li><a href='".str_replace("{page}",$totalpage,$tnamerule)."'>末页</a></li>\r\n";
+            $nextpage.="<li><a class='xiayiye' href='".str_replace("{page}",$nextpagenum,$tnamerule)."'>下一页</a></li>\r\n";
+            $endpage="<li><a class='xiayiye' href='".str_replace("{page}",$totalpage,$tnamerule)."'>末页</a></li>\r\n";
         }
         else
         {
@@ -1036,11 +1036,11 @@ class ListView
         {
             if($j==$this->PageNo)
             {
-                $listdd.= "<li class=\"thisclass\">$j</li>\r\n";
+                $listdd.="<li><a class='dangqian' href='javascript:void(0);'>".$j."</a></li>\r\n";
             }
             else
             {
-                $listdd.="<li><a href='".str_replace("{page}",$j,$tnamerule)."'>".$j."</a></li>\r\n";
+                $listdd.="<li><a class='qita' href='".str_replace("{page}",$j,$tnamerule)."'>".$j."</a></li>\r\n";
             }
         }
         $plist = '';
@@ -1103,21 +1103,21 @@ class ListView
         //获得上一页和下一页的链接
         if($this->PageNo != 1)
         {
-            $prepage.="<li><a href='".$purl."PageNo=$prepagenum'>上一页</a></li>\r\n";
-            $indexpage="<li><a href='".$purl."PageNo=1'>首页</a></li>\r\n";
+            $prepage.="<li><a class='shangyy' href='".$purl."PageNo=$prepagenum'>上一页</a></li>\r\n";
+            $indexpage="<li><a class='shangyy' href='".$purl."PageNo=1'>首页</a></li>\r\n";
         }
         else
         {
-            $indexpage="<li><a>首页</a></li>\r\n";
+            $indexpage="<li><a class='shangyy'>首页</a></li>\r\n";
         }
         if($this->PageNo!=$totalpage && $totalpage>1)
         {
-            $nextpage.="<li><a href='".$purl."PageNo=$nextpagenum'>下一页</a></li>\r\n";
-            $endpage="<li><a href='".$purl."PageNo=$totalpage'>末页</a></li>\r\n";
+            $nextpage.="<li><a class='xiayiye' href='".$purl."PageNo=$nextpagenum'>下一页</a></li>\r\n";
+            $endpage="<li><a class='xiayiye' href='".$purl."PageNo=$totalpage'>末页</a></li>\r\n";
         }
         else
         {
-            $endpage="<li><a>末页</a></li>\r\n";
+            $endpage="<li><a class='xiayiye'>末页</a></li>\r\n";
         }
 
 
@@ -1145,11 +1145,11 @@ class ListView
         {
             if($j==$this->PageNo)
             {
-                $listdd.= "<li class=\"thisclass\"><a>$j</a></li>\r\n";
+                $listdd.= "<li><a class='dangqian'>$j</a></li>\r\n";
             }
             else
             {
-                $listdd.="<li><a href='".$purl."PageNo=$j'>".$j."</a></li>\r\n";
+                $listdd.="<li><a class='qita' href='".$purl."PageNo=$j'>".$j."</a></li>\r\n";
             }
         }
 

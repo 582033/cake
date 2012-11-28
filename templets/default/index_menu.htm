@@ -2,38 +2,35 @@
 <div id="targetBox" class="left_hd_menu" style="background-image: none; position: absolute; left: 199.5px; top: -504px; z-index: 999; display: none; background-position: initial initial; background-repeat: initial initial;">
     <div class="left_menu_bottom">
         <div class="my_left_category">
+
             <div class="my_left_cat_list">
-                <h2 class="yiji_menu" style="margin-top:10px;">装修建材</h2>
+
+				{dede:channelartlist typeid='2'}
                 <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'">
                     <h3>
-                        <a target="_blank" href="#">橱柜</a>
+						<a target="_blank" href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
                     </h3>
                     <div class="h3_cat">
                         <div class="shadow">
                             <div class="shadow_border">
                                 <div style="background-color:#f4f4f4; overflow:hidden; zoom:1;">
                                     <div class="huibeijing_right">
-                                        <p class="renmen_p_p">热门品牌</p>
+										{dede:channel type='son' noself='yes'}
                                         <ul class="remen_pinpai">
                                             <li>
-                                                <a target="_blank" href="#" class="menu_link_ga">星艺温康</a>
+                                                <a target="_blank" href="[field:typelink/]" class="menu_link_ga">[field:typename/]</a>
                                             </li>
                                             <!-- <li>|</li>-->
                                         </ul>
-                                        <p class="huiline_menu"></p>
-                                        <p class="renmen_p_p">商品分类</p>
-                                        <ul class="remen_pinpai">
-                                            <li>
-                                                <a target="_blank" href="#" class="menu_link_ga">整体橱柜</a>
-                                            </li>
-                                            <!-- <li>|</li>-->
-                                        </ul>
+										{/dede:channel}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+				{/dede:channelartlist}
+
             </div>
         </div>
     </div>
