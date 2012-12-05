@@ -36,33 +36,12 @@
 <!--左侧开始-->
 <div class="sc_left_menu">
   <!--菜单开始-->
-  <div class="sc_spfl">
-	  <ul id="example" class="filetree">
-		  <li><span class="folder">所有商品分类</span>
-			  <ul>
-				  <li ><span class="folder">{dede:field name='typename' function=”GetTypeName(@me)”/}</span>
-
-					  {dede:channel type='son'}
-					  <ul>
-						  <li ><span class="folder"><a href="[field:typelink /]" class="tree_mune_erji">[field:typename /]</a><span class="gary94" style="font-weight:normal;">(278)</span></span>
-						  <!-- 下级
-						  <ul>
-							  <li><span class="file"><a href="[field:typelink /]" class="tree_mune_sanji">[field:typename /]</a></span><span class="gary94">(47)</span></li>
-						  </ul>
-						-->
-					  </ul>
-					{/dede:channel} 
-				  </li>
-			  </ul>
-		  </li>
-	  </ul>
-  </div>
+		{dede:include filename="lib_menu.htm"/}
     <!--菜单结束-->
 </div>
 <!--左侧结束-->
             <!--右侧开始-->
             <div class="sc_right">
-            	<div class="xgsp_box"><p class="sysp_text">所有商品 > <!-- <a href="" class="oranger_link"> -->装修建材<!-- </a> --> > <!-- <a href="" class="oranger_link"> -->橱柜<!-- </a> --> </p><p class="xgsp_jian"><!--相关商品<span class="orangeb">6000</span>件--></p></div>
                 <div class="sc_lb_list">
                 	<ul class="sc_zs_list">
 					   {dede:list pagesize='12'}
@@ -71,10 +50,6 @@
                             	<dt class="sc_lb_list_pic"><a href="[field:arcurl/]"><img src="[field:litpic/]" width="151" height="151" alt="field:title function='html2text(@me)'/]"/></a></dt>
                                 <dd>
                                 	<a href="[field:arcurl/]" class="shangpin_mc">[field:title/]</a>
-									<!--
-                                    <p><span class="gary94 xiahua">￥12590</span>   <span class="redb">￥12590</span></p>
-                                    <p>已有<span class="orange">0 </span>人购买 |<span class="orange"> 0</span>人评价</p>
-									-->
                                 </dd>
                             </dl>
                         </li>
@@ -82,11 +57,9 @@
                     </ul>
                 </div>
                 <!--翻页开始-->
-                  <div class="yhq_page">
+                <div class="yhq_page">
                 	<ul>
-                	<li><a href="?page=1/chugui/list_0_0" class='shangyy'>上一页</a> </li>
-				<li><a class='dangqian'>1</a></li><li><a href=/chugui/list_0_0_2.html class='qita'>2</a>&nbsp;</li><li><a href=/chugui/list_0_0_3.html class='qita'>3</a>&nbsp;</li> 
-				<li><a href="?page=2/chugui/list_0_0" class='xiayiye'>下一页</a> </li>
+					 {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="1"/}
 					</ul>
                 </div>
                 <!--翻页结束-->
