@@ -431,14 +431,21 @@ border-left:none; border-right:none;}
 	float:left;
 	border:1px #ffd9b4 solid;
 }
+.sc_c_img img{
+	width:160px;
+	height:160px;
+
+}
 .sc_c_r{
 	float:left;
 	width:480px;
 	height:140px;
 	margin:5px;
 	padding:10px 20px;
+	border:1px #ffd9b4 solid;
 }
 .sc_c_r span{
+	padding-left:2px;
 	color:#949494;
 }
 .sc_hr {

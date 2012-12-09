@@ -2,7 +2,7 @@
 $cfg_basehost = 'http://yjiang.com';
 $cfg_cmspath = '';
 $cfg_cookie_encode = 'YwSIn3220N';
-$cfg_indexurl = '/';
+$cfg_indexurl = 'yjiang.com/';
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';
 $cfg_webname = 'yjiangs cake';

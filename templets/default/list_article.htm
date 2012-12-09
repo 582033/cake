@@ -5,6 +5,7 @@
 <title>{dede:global.cfg_webname/}</title>
 <meta name="description" content="{dede:global.cfg_description/}" />
 <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="{dede:global.cfg_templets_skin/}/css/aiju_aj_index1.css" type="text/css" rel="stylesheet" />
 <link href="{dede:global.cfg_templets_skin/}/css/aiju_sc_index.css" type="text/css" rel="stylesheet" />
 <link href="{dede:global.cfg_templets_skin/}/css/aiju_sc_lb.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/jquery.treeview.css" type="text/css" />
@@ -23,6 +24,7 @@
         <!--头部结束-->
         <!--内容开始-->
         <div class="aiju_content">
+			{dede:include filename="lib_banner.htm"/}
             <div class="daohang">
                 <div class="daohang_pic"><img src="http://img.sys.aiju.com//shop2011/ajsc.jpg" width="121" height="37" /></div>
 				<p class="daohang_text"> <span class="blue">{dede:field name='position'/}</span> </p>
@@ -36,27 +38,7 @@
 <!--左侧开始-->
 <div class="sc_left_menu">
   <!--菜单开始-->
-  <div class="sc_spfl">
-	  <ul id="example" class="filetree">
-		  <li><span class="folder">所有商品分类</span>
-			  <ul>
-				  <li ><span class="folder">{dede:field name='typename' function=”GetTypeName(@me)”/}</span>
-
-					  {dede:channel type='son'}
-					  <ul>
-						  <li ><span class="folder"><a href="[field:typelink /]" class="tree_mune_erji">[field:typename /]</a><span class="gary94" style="font-weight:normal;">(278)</span></span>
-						  <!-- 下级
-						  <ul>
-							  <li><span class="file"><a href="[field:typelink /]" class="tree_mune_sanji">[field:typename /]</a></span><span class="gary94">(47)</span></li>
-						  </ul>
-						-->
-					  </ul>
-					{/dede:channel} 
-				  </li>
-			  </ul>
-		  </li>
-	  </ul>
-  </div>
+		{dede:include filename="lib_menu.htm"/}
     <!--菜单结束-->
 </div>
 <!--左侧结束-->

@@ -1,0 +1,11 @@
+.gongsi_tj_right h3{
+	width:540px;
+	padding:5px 0px;
+	font-size:18px;
+	text-align:center;
+	border-bottom:1px #ababab dotted;
+}
+.gongsi_tj_right .gongsi_tj_content{
+	padding:5px 10px 20px 10px;
+	width:650px;
+}
