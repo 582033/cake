@@ -219,6 +219,10 @@
 	overflow:hidden;
 	zoom:1;
 }
+
+.sc_zs_list dl dd{
+	text-align:center;
+}
 .sc_zs_list .sc_lb_list_lt{
 	position:absolute;
 	top:-13px;
