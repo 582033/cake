@@ -1,12 +1,12 @@
 <?php
 $cfg_basehost = 'http://yjiang.com';
 $cfg_cmspath = '';
-$cfg_cookie_encode = 'YwSIn3220N';
+$cfg_cookie_encode = 'XoHCi5351I';
 $cfg_indexurl = '/';
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';
-$cfg_webname = 'yjiang\'s cake';
-$cfg_adminemail = 'j582033@163.com';
+$cfg_webname = '我的网站';
+$cfg_adminemail = 'admin@dedecms.com';
 $cfg_html_editor = 'ckeditor';
 $cfg_arcdir = '/a';
 $cfg_medias_dir = '/uploads';

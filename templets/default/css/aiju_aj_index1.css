@@ -310,7 +310,6 @@ text-align:center;
 /*装修建材开始*/
 .zxjc_1f{
 	width:950px;
-	height:200px;
 	margin-top:10px;
 }
 .zxjc_1f_top{
@@ -425,6 +424,9 @@ text-align:center;
 .zhuangsi_list{
 	height:168px;
 }
+.zhuangsi_2_list{
+	height:368px;
+}
 .zsgs_4f{
 	height:171px;
 }
@@ -508,8 +510,6 @@ clear:both;
 margin-top:0px;
 border:1px solid #dddddd;
 border-top:none;
-height:256px;
-text-align:center;
 padding-top:8px;
 }
 .zxzx_list{

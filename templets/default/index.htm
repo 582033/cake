@@ -21,6 +21,25 @@
 				<!--第一部分开始-->
 				{dede:include filename="lib_banner.htm"/}
 				<!--第一部分结束-->
+				<!--0F促销资讯开始-->
+				<div class="zxjc_1f">
+					<div class="zxzx_Menubox">
+						<h3 class="orange">促销资讯</h3>
+						<a target="_blank" href="/plus/list.php?tid=11" class="lt_mroe">更多</a>
+					</div>
+					<!--列表开始-->
+					<div class="zxzx_Contentbox">
+							{dede:arclist titlelen='60' row='10' typeid='11' limit='10,14'}
+							<dl class="zxzx_list">
+								<dt><a href="[field:arclist/]" target="_blank">[field:title/]</a></dt>
+								<dd>[field:pubdate function="MyDate('Y-m-d',@me)"/]</dd>
+							</dl>
+							{/dede:arclist}	
+						</dl>
+					</div>
+					<!--列表结束-->
+				</div>
+				<!--0F促销资讯结束-->
 				<!--1F设计师开始-->
 				<div class="zxjc_1f">
 					<div class="zxzx_Menubox">
@@ -28,9 +47,9 @@
 						<a target="_blank" href="/plus/list.php?tid=5" class="lt_mroe">更多</a>
 					</div>
 					<!--列表开始-->
-					<div class="jc_cuxiao zhuangsi_list">
+					<div class="jc_cuxiao zhuangsi_2_list">
 						<ul>
-							{dede:arclist titlelen='40' row='5' typeid='5'}
+							{dede:arclist titlelen='40' row='10' typeid='5'}
 							<li>
 							<dl>
 								<dt class="jc_cuxiao_pic jc_asgs_pic"><a target="_blank" href="[field:arcurl/]"><img src="[field:litpic/]" width="165" height="124" alt=''/></a>
