@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>装修建材打折网</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="/templets/default/css/aiju_aj_index1.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/css/aiju_sc_index.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/css/aiju_sc_lb.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="/templets/default/css/jquery.treeview.css" type="text/css" />
+<script src="/templets/default/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="/templets/default/js/jquery.KinSlideshow-1.2.1.min.js"></script>
+<script type="text/javascript" src="/templets/default/js/UrlUnit.js"></script>
+<script type="text/javascript" src="/templets/default/js/simpleCart.js"></script>
+<script type="text/javascript" src="/templets/default/js/jquery.treeview.js"></script>
+<script type="text/javascript" src="/templets/default/js/jquery.lazyload.mini.js"></script>
+</head>
+<body>
+	<div class="main950">
+    	<!--头部开始-->
+					<script language="javascript">
+			//去左右空格
+			function trim(s){
+				return rtrim(ltrim(s));
+			};
+
+			//去左空格
+			function ltrim(s){
+				s = s.replace(/^　+| +/, " ");
+				return s.replace(/^\s*/, "");
+			};
+
+			//去右空格
+			function rtrim(s) {
+				s = s.replace(/　+| +$/, " ");
+				return s.replace(/\s*$/, "");
+			};
+			//判断字符串是否为空
+			function isEmpty(s) {
+				s = trim(s);
+				return s.length == 0;
+			};
+			function submitData1() {
+					var f = document.sreachdata;
+					if(isEmpty(f.keyword.value)){
+						alert("提示：请输入您要查找的关键字");
+						return false;
+					}
+					document.sreachdata.submit();
+				}
+			</script>
+		<div class="aiju_header">
+            <div class="loginbar">
+            	<ul class="aiju_login left" id="logining"></ul>
+                <ul class="aiju_login right aiju_login_r">
+                    <li><a href="javascript:void(0);" class="shangpin_mc" onclick="addcollectnum();">收藏本站</a></li>
+					<li class="gsdh_tel"></li>
+                </ul>
+            </div>
+           
+            <!--<div class="head_banner"></div>-->
+            <div class="aiju_menu">
+				<div class="aiju_menu_logo"><a href=""><img src="/templets/default/images/logo.jpg" width="217" height="60" /></a></div>
+                <div class="aiju_menu_zhanwei"><img src="http://img.sys.aiju.com/shop2011/zhanwei.jpg" width="170" height="102" /></div>
+                <div class="aiju_menu_sousuo">
+					<form action="http://www.baidu.com/s" target='_blank' name="sreachdata">
+						<input type="hidden" value="" name="is"/>
+                    <ul class="sousuo_biaoq">
+                        <li><a href="javascript:void(0);"  class="dangqian_bq"  id="product" onclick="inputvalue('product');" onfocus="this.blur()">商品</a></li>
+                    </ul>
+                    <div class="aiju_menu_box" id="cssbox">
+						<div class="aiju_menu_boxmiddle left">
+							<input type="text" value="" name="keyword"  class="sousuo_gjz"/>
+						</div>
+                        <div class="aiju_menu_boxright left"><input type="button" value="" name="" class="sousuo_button" onclick="submitData1();" /></div>
+                    </div>
+				</form>
+                    <ul class="renmen_sousuo">
+						<!--
+                    	<li>热门搜索：</li>
+						<li><a href="#" target="_blank">史密斯</a></li>
+						-->
+                    </ul>
+                </div>
+            </div>
+            <!--导航条开始-->
+            <div class="dht">
+            	<ul>
+                	<li class="dht_1"><a href="/" class="dht_link">首页</a></li>
+					
+                    <li class="dht_4"><a href="/plus/list.php?tid=2" class="dht_link1">装修建材</a></li>
+					
+                    <li class="dht_4"><a href="/plus/list.php?tid=16" class="dht_link1">设计师</a></li>
+					
+                    <li class="dht_4"><a href="/plus/list.php?tid=1" class="dht_link1">施工公司</a></li>
+					
+                    <li class="dht_4"><a href="/plus/list.php?tid=12" class="dht_link1">监理公司</a></li>
+					
+                    <li class="dht_4"><a href="/plus/list.php?tid=15" class="dht_link1">装修学堂</a></li>
+					
+
+                </ul>
+            </div>
+            <!--导航条结束-->
+        </div>
+
+
+        <!--头部结束-->
+        <!--头部结束-->
+        <!--内容开始-->
+        <div class="aiju_content">
+			
+            <div class="box1" style="margin-top:10px;">
+                <!--左侧菜单开始-->
+                <div class="left_menu">
+                    <a style="color:#fff; text-decoration:none; cursor:pointer;" id="trigger1" href="javascript:;" rel="targetBox"><div class="left_menu_top"><h6>全部建材分类</h6></div></a>
+                    <!--<div class="left_menu_bottom">
+                    </div>-->
+					<div class="tuijianpp">
+						<ul><script src='/plus/ad_js.php?aid=21' language='javascript'></script></ul>
+					</div>
+                </div>
+                <!--左侧菜单结束-->
+                <!--右侧开始-->
+                <div class="box1_right">
+                	<div class="box1_right_num1">
+                    	<!--轮播开始-->
+                    	<div class="aiju_lunbo">
+							<div id="taobaoSlide" style="visibility:hidden;">
+								<a href='/plus/view.php?aid=17' target='_blank'><img src='/uploads/allimg/121208/1-12120Q336010-L-lp.jpg' width='492' height='270'></a>
+<a href='/plus/view.php?aid=10' target='_blank'><img src='/uploads/121208/1-12120Q33123644-lp.jpg' width='492' height='270'></a>
+
+							</div>
+
+						</div>
+				<script type="text/javascript"> 
+					$(document).ready(function(){
+						$('#taobaoSlide').KinSlideshow({
+							moveStyle:"down", // 移动方式(down/up/left/right)
+							intervalTime:5, // 间隔时间(秒)
+							mouseEvent:"mouseover",
+							isHasTitleBar:false, // 是否显示标题条
+							isHasTitleFont:false, // 是否显示标题文字
+							isHasBtn:true, // 是否显示按钮
+							btn:{
+								btn_bgColor:"#666666", // 按钮背景色
+								btn_bgHoverColor:"#ff6701", // 被选中时按钮的背景色
+
+								btn_fontColor:"#CCCCCC", // 按钮文字的颜色
+
+								btn_borderColor:"#999999", // 按钮边框背景色
+								btn_borderHoverColor:"#ff6701" // 被选中时按钮边框的背景色
+							}, // 按钮的样式
+							titleFont:{
+								TitleFont_size:14, // 标题文字的大小
+								TitleFont_color:"#ffffff" // 标题文字的颜色
+							}
+						});
+					});
+				</script>
+                       <!-- 轮播结束-->
+                       <div class="box1_right_num1_right">
+                           <!--登陆开始-->
+                           <div class="login">
+                                <div class="aiju_gonggao">
+                                	<div class="aiju_gonggao_top">
+                                    	<h4>最新公告</h4>
+                                        <a target="_blank" href="/plus/list.php?tid=11" class="shangpin_mc">更多 >></a>
+                                    </div>
+                                    <div class="aiju_gonggao_middle">
+                                    	<ul>
+											<li><a href="/a/wangzhanxinwen/2012/1212/19.html" target="_blank" class="shangpin_mc">潜水艇地漏特价促销75元一个</a></li>
+<li><a href="/a/wangzhanxinwen/2012/1111/2.html" target="_blank" class="shangpin_mc">网站开放咯开始测试咯</a></li>
+<li><a href="/plus/view.php?aid=8" target="_blank" class="shangpin_mc">今天发布公告嗯</a></li>
+	
+									   </ul>
+                                    </div>
+                                    <div class="aiju_gonggao_bottom"><img src="http://img.sys.aiju.com//shop2011/gonggao_bottom.jpg" width="208" height="7" /></div>
+                                </div>
+                           </div>
+                           <!--登陆结束-->
+                       </div>
+                    </div>
+                </div>
+               <!-- 右侧结束-->
+            </div>
+
+			<!--
+            <div class="daohang">
+                <div class="daohang_pic"><img src="http://img.sys.aiju.com//shop2011/ajsc.jpg" width="121" height="37" /></div>
+				<p class="daohang_text"> <span class="blue"><a href='http://dazhewang.d15.163ns.cn/'>主页</a> > <a href='/plus/list.php?tid=16'>设计师</a> > </span> </p>
+            </div>
+			-->
+           <!--左侧开始-->
+<script language="javascript">
+	$(document).ready(function(){
+		$("#example").treeview();
+	});
+</script>
+<!--左侧开始-->
+<div class="sc_left_menu">
+				<div class="zxzx_Menubox_left">
+					<h3 class="orange">设计师:</h3>
+				</div>
+				<div class="left_list"></div>
+</div>
+<!--左侧结束-->
+            <!--右侧开始-->
+            <div class="sc_right">
+                <div class="sc_lb_list">
+					<div class="sc_c_img"></div>
+					<div class="sc_c_r">
+						<ul>
+							<li><b>设计师名:</b><span></span></li>
+							<li><b>收费标准:</b><span style='color:red'></span></li>
+							<li><b>设计理念:</b><span></span></li>
+							<li><b>作品荣誉:</b><span></span></li>
+						</ul>
+					</div>
+					<div class="sc_hr"></div>
+				</div>
+			</div>
+            <!--右侧结束-->
+
+		<!--内容结束-->
+		<script type="text/javascript" src="/templets/default/js/jquery-powerFloat-min.js"></script>
+<div id="targetBox" class="left_hd_menu" style="background-image: none; position: absolute; left: 199.5px; top: -504px; z-index: 999; display: none; background-position: initial initial; background-repeat: initial initial;">
+    <div class="left_menu_bottom">
+        <div class="my_left_category">
+
+            <div class="my_left_cat_list">
+
+				<div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'">
+                    <h3>
+						<a target="_blank" href="/plus/list.php?tid=3">橱柜</a>
+                    </h3>
+                    <div class="h3_cat">
+                        <div class="shadow">
+                            <div class="shadow_border">
+                                <div style="background-color:#f4f4f4; overflow:hidden; zoom:1;">
+                                    <div class="huibeijing_right">
+										
+                                        <ul class="remen_pinpai">
+                                            <li>
+                                                <a target="_blank" href="/plus/list.php?tid=4" class="menu_link_ga">志邦</a>
+                                            </li>
+                                            <!-- <li>|</li>-->
+                                        </ul>
+										
+                                        <ul class="remen_pinpai">
+                                            <li>
+                                                <a target="_blank" href="/plus/list.php?tid=8" class="menu_link_ga">星艺温康</a>
+                                            </li>
+                                            <!-- <li>|</li>-->
+                                        </ul>
+										
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'">
+                    <h3>
+						<a target="_blank" href="/menchuang/">门窗</a>
+                    </h3>
+                    <div class="h3_cat">
+                        <div class="shadow">
+                            <div class="shadow_border">
+                                <div style="background-color:#f4f4f4; overflow:hidden; zoom:1;">
+                                    <div class="huibeijing_right">
+										
+                                        <ul class="remen_pinpai">
+                                            <li>
+                                                <a target="_blank" href="/plus/list.php?tid=7" class="menu_link_ga">CRG</a>
+                                            </li>
+                                            <!-- <li>|</li>-->
+                                        </ul>
+										
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(function() {
+	//通过默认rel属性加载
+	$("#trigger1").powerFloat();
+});
+</script>
+
+		        <!--底部信息开始-->
+        <!--<div class="footer">
+            <!--联系我们-->
+            <div class="lianxiwomen">
+            	<ul class="lianxiwomen_list">
+                	<li><a href="#" class="shangpin_mc">关于我们</a></li>
+                    <li>|</li>
+                    <li><a href="#" class="shangpin_mc">网站地图</a></li>
+                    <li>|</li>
+                    <li><a href="#" class="shangpin_mc">招商合作</a></li>
+                    <li>|</li>
+                    <li><a href="#" class="shangpin_mc">联系我们</a></li>
+                     <li>|</li>
+                    <li><a href="#" class="shangpin_mc">友情链接</a></li>
+                    <li>|</li>
+                    <li><a href="#" class="shangpin_mc">帮助中心</a></li>
+					<li>|</li>
+                    <li><a href="#" class="shangpin_mc">诚聘英才</a></li>
+                </ul>
+				<p></p>
+                <p>Copyright &copy; 2004-2011 DEDECMS. 织梦科技 版权所有</p>
+            </div>
+            <!--联系我们结束-->
+        </div>
+        <!--底部信息结束-->
+
+    </div>
+    </div>
+</body>
+</html>

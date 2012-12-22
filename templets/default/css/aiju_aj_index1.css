@@ -53,7 +53,7 @@
 .box1 .left_menu .tuijianpp h4{
 	color:#eb5c11;
 	font-family:"黑体";
-/*	font-weight: normal;*/
+	/*	font-weight: normal;*/
 	padding:12px;
 }
 .box1 .left_menu .tuijianpp ul{
@@ -140,7 +140,7 @@
 }
 .aiju_gonggao .aiju_gonggao_middle{
 	width:208px;
-	height:214px;
+	height:216px;
 }
 .aiju_gonggao .aiju_gonggao_middle ul li{
 	padding:3px 0 0 15px;
@@ -160,60 +160,60 @@
 /*选项卡1*/
 #Tab1{
 	width:706px;
-margin:0px;
-padding:0px;
-margin:0 auto;}
+	margin:0px;
+	padding:0px;
+	margin:0 auto;}
 /*选项卡2*/
 #Tab2{
-width:350px;
-margin:0px;
-padding:0px;
-margin:0 auto;}
+	width:350px;
+	margin:0px;
+	padding:0px;
+	margin:0 auto;}
 /*选项卡3*/
 #Tab3{
-width:230px;
-margin:0px;
-padding:0px;
-margin:0 auto;}
+	width:230px;
+	margin:0px;
+	padding:0px;
+	margin:0 auto;}
 /*菜单class*/
 .remen_Menubox {
-width:100%;
-border-bottom:none;
-height:29px;
-line-height:29px;
+	width:100%;
+	border-bottom:none;
+	height:29px;
+	line-height:29px;
 }
 .remen_Menubox ul{
-margin:0px;
-padding:0px;
-height:27px;
-margin-top:2px;
+	margin:0px;
+	padding:0px;
+	height:27px;
+	margin-top:2px;
 }
 .remen_Menubox li{
-float:left;
-display:block;
-cursor:pointer;
-width:85px;
-text-align:center;
-font-weight:bold;
-height:27px;
-margin:0 4px;
-font-size:14px; 
+	float:left;
+	display:block;
+	cursor:pointer;
+	width:85px;
+	text-align:center;
+	font-weight:bold;
+	height:27px;
+	margin:0 4px;
+	font-size:14px; 
 }
 /*class=hover的li*/
 .remen_Menubox li.hover_menu{ 
-padding:0px;
-width:85px;
-font-weight:bold;
-height:27px;
-line-height:27px;
+	padding:0px;
+	width:85px;
+	font-weight:bold;
+	height:27px;
+	line-height:27px;
 }
 .remen_Contentbox{
-clear:both;
-width:706px;
-margin-top:0px;
-border-top:none;
-height:259px;
-text-align:center;
+	clear:both;
+	width:706px;
+	margin-top:0px;
+	border-top:none;
+	height:259px;
+	text-align:center;
 }
 .rementuijian_list li{
 	width:165px;
@@ -435,7 +435,7 @@ text-align:center;
 .zxzx_box{
 	width:950px;
 	margin-top:10px;
-/*	margin-bottom:10px;*/
+	/*	margin-bottom:10px;*/
 	clear:both;
 	height:295px;
 }
@@ -477,43 +477,47 @@ text-align:center;
 	margin-left:10px;
 }
 .zxzx_Menubox ul{
-margin:0px;
-padding:0px;
-height:26px;
-margin-top:3px;
+	margin:0px;
+	padding:0px;
+	height:26px;
+	margin-top:3px;
 }
 .zxzx_Menubox li{
-float:left;
-display:block;
-cursor:pointer;
-text-align:center;
-color:#333;
-padding:0 8px 0 8px;
-height:26px;
-line-height:23px;
+	float:left;
+	display:block;
+	cursor:pointer;
+	text-align:center;
+	color:#333;
+	padding:0 8px 0 8px;
+	height:26px;
+	line-height:23px;
 }
 /*class=hover的li*/
 .zxzx_Menubox li.hover_menu{ 
-padding:0px;
-background:#fff;
-border-left:1px solid #dcdddd;
-border-right:1px solid #dcdddd;
-background:url(../images/zxzx_link_bj.jpg) repeat-x;
-color:#333;
-font-weight:bold;
-height:26px;
-line-height:23px;
-padding:0 8px 0 8px;
+	padding:0px;
+	background:#fff;
+	border-left:1px solid #dcdddd;
+	border-right:1px solid #dcdddd;
+	background:url(../images/zxzx_link_bj.jpg) repeat-x;
+	color:#333;
+	font-weight:bold;
+	height:26px;
+	line-height:23px;
+	padding:0 8px 0 8px;
 }
 .zxzx_Contentbox{
-clear:both;
-margin-top:0px;
-border:1px solid #dddddd;
-border-top:none;
-padding-top:8px;
+	clear:both;
+	height:172px;
+	margin-top:0px;
+	border:1px solid #dddddd;
+	border-top:none;
+	padding-top:8px;
 }
 .zxzx_list{
-	width:330px;
+	margin-left:20px;
+	margin-right:50px;
+	float:left;
+	width:240px;
 }
 .zxzx_list dt{
 	float:left;
@@ -524,9 +528,10 @@ padding-top:8px;
 }
 .zxzx_list dt a{
 	padding-left:10px;
+	color:#333;
 }
 .zxzx_list dd{
-	width:43px;
+	width:65px;
 	float:right;
 	height:25px;
 }

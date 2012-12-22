@@ -1,0 +1,1 @@
+INSERT INTO `cake_admin` VALUES('1','10','admin','104a3ea8d45834194f69','admin','','','0','1356145526','124.42.28.170');

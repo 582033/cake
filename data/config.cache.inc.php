@@ -1,7 +1,7 @@
 <?php
-$cfg_basehost = 'http://yjiang.com';
+$cfg_basehost = 'http://dazhewang.d15.163ns.cn';
 $cfg_cmspath = '';
-$cfg_cookie_encode = 'FbEHi3654M';
+$cfg_cookie_encode = 'FuJNr5472H';
 $cfg_indexurl = '/';
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';

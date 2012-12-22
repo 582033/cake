@@ -1,0 +1,7 @@
+<?php
+$z[0]=Array("global","",36,68);
+$z[0][4]['name']="cfg_templets_skin";
+$z[1]=Array("channelartlist","\n                <div class=\"h2_cat\" onmouseover=\"this.className='h2_cat active_cat'\" onmouseout=\"this.className='h2_cat'\">\n                    <h3>\n						<a target=\"_blank\" href=\"{dede:field name='typeurl'/}\">{dede:field name='typename'/}</a>\n                    </h3>\n                    <div class=\"h3_cat\">\n                        <div class=\"shadow\">\n                            <div class=\"shadow_border\">\n                                <div style=\"background-color:#f4f4f4; overflow:hidden; zoom:1;\">\n                                    <div class=\"huibeijing_right\">\n										{dede:channel type='son' noself='yes'}\n                                        <ul class=\"remen_pinpai\">\n                                            <li>\n                                                <a target=\"_blank\" href=\"[field:typelink/]\" class=\"menu_link_ga\">[field:typename/]</a>\n                                            </li>\n                                            <!-- <li>|</li>-->\n                                        </ul>\n										{/dede:channel}\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n				",456,1772);
+$z[1][4]['typeid']="2";
+
+?>

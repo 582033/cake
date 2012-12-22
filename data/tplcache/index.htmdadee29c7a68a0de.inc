@@ -1,0 +1,46 @@
+<?php
+$z[0]=Array("global","",239,267);
+$z[0][4]['name']="cfg_soft_lang";
+$z[1]=Array("global","",282,308);
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("global","",354,384);
+$z[2][4]['name']="cfg_description";
+$z[3]=Array("global","",423,450);
+$z[3][4]['name']="cfg_keywords";
+$z[4]=Array("global","",470,502);
+$z[4][4]['name']="cfg_templets_skin";
+$z[5]=Array("global","",579,611);
+$z[5][4]['name']="cfg_templets_skin";
+$z[6]=Array("global","",698,730);
+$z[6][4]['name']="cfg_templets_skin";
+$z[7]=Array("global","",817,849);
+$z[7][4]['name']="cfg_templets_skin";
+$z[8]=Array("global","",914,946);
+$z[8][4]['name']="cfg_templets_skin";
+$z[9]=Array("include","",1047,1084);
+$z[9][4]['filename']="header.htm";
+$z[10]=Array("include","",1200,1241);
+$z[10][4]['filename']="lib_banner.htm";
+$z[11]=Array("arclist","\r\n							<dl class=\"zxzx_list\">\r\n								<dt><a href=\"[field:arcurl/]\" target=\"_blank\">[field:title/]</a></dt>\r\n								<dd>[field:pubdate function=\"MyDate('Y-m-d',@me)\"/]</dd>\r\n							</dl>\r\n							",1575,1852);
+$z[11][4]['titlelen']="60";
+$z[11][4]['row']="10";
+$z[11][4]['typeid']="11";
+$z[11][4]['limit']="10,14";
+$z[12]=Array("arclist","\r\n							<li>\r\n							<dl>\r\n								<dt class=\"jc_cuxiao_pic jc_asgs_pic\"><a target=\"_blank\" href=\"[field:arcurl/]\"><img src=\"[field:litpic/]\" width=\"165\" height=\"124\" alt=''/></a>\r\n								</dt>\r\n								<dd>\r\n								<p class=\"zsgs_link\"><a target=\"_blank\" href=\"[field:arcurl /]\" class=\"shangpin_mc\">[field:title /]</a></p>\r\n								</dd>\r\n							</dl>\r\n							</li>\r\n							",2269,2711);
+$z[12][4]['titlelen']="40";
+$z[12][4]['row']="10";
+$z[12][4]['typeid']="16";
+$z[13]=Array("arclist","\r\n							<li>\r\n							<dl>\r\n								<dt class=\"jc_cuxiao_pic jc_asgs_pic\"><a target=\"_blank\" href=\"[field:arcurl/]\"><img src=\"[field:litpic/]\" width=\"165\" height=\"124\" alt=''/></a>\r\n								</dt>\r\n								<dd>\r\n								<p class=\"zsgs_link\"><a target=\"_blank\" href=\"[field:arcurl /]\" class=\"shangpin_mc\">[field:title /]</a></p>\r\n								</dd>\r\n							</dl>\r\n							</li>\r\n							",3132,3572);
+$z[13][4]['titlelen']="40";
+$z[13][4]['row']="5";
+$z[13][4]['typeid']="1";
+$z[14]=Array("arclist","\r\n							<li>\r\n							<dl>\r\n								<dt class=\"jc_cuxiao_pic jc_asgs_pic\"><a target=\"_blank\" href=\"[field:arcurl/]\"><img src=\"[field:litpic/]\" width=\"165\" height=\"124\" alt=''/></a>\r\n								</dt>\r\n								<dd>\r\n								<p class=\"zsgs_link\"><a target=\"_blank\" href=\"[field:arcurl /]\" class=\"shangpin_mc\">[field:title /]</a></p>\r\n								</dd>\r\n							</dl>\r\n							</li>\r\n							",4001,4442);
+$z[14][4]['titlelen']="40";
+$z[14][4]['row']="5";
+$z[14][4]['typeid']="15";
+$z[15]=Array("include","",4583,4624);
+$z[15][4]['filename']="index_menu.htm";
+$z[16]=Array("include","",4629,4666);
+$z[16][4]['filename']="footer.htm";
+
+?>
