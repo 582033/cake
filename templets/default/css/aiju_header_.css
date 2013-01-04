@@ -49,6 +49,9 @@ top:0;
 .loginbar .aiju_login_r li{
 	padding:0 8px 0 8px;
 }
+.loginbar .aiju_login_r li a{
+	color:#333;
+}
 .loginbar .aiju_login_r .gsdh_tel{
 	background:url(../images/9.26tel_pic.jpg) no-repeat 5px 3px;
 	color:#d74e03;

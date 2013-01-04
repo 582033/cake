@@ -513,6 +513,25 @@
 	border-top:none;
 	padding-top:8px;
 }
+.zxzx_links{
+	margin-top:0px;
+	border:1px solid #dddddd;
+	border-top:none;
+	padding-top:8px;
+}
+.zxzx_links a{
+	margin:10px;
+}
+.zxzx_links a:link,
+.zxzx_links a:visited{
+	color:#333333;
+	text-decoration:none;
+}
+.zxzx_links a:hover,
+.zxzx_links a:active{
+	color:#ec621a;
+	text-decoration:underline;
+}
 .zxzx_list{
 	margin-left:20px;
 	margin-right:50px;

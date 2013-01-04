@@ -1,10 +1,10 @@
-INSERT INTO `cake_sysconfig` VALUES('1','cfg_basehost','站点根网址','1','string','http://www');
+INSERT INTO `cake_sysconfig` VALUES('1','cfg_basehost','站点根网址','1','string','http://www.97dazhe.com.cn');
 INSERT INTO `cake_sysconfig` VALUES('2','cfg_cmspath','DedeCMS安装目录','2','string','');
 INSERT INTO `cake_sysconfig` VALUES('3','cfg_cookie_encode','cookie加密码','2','string','YwSIn3220N');
-INSERT INTO `cake_sysconfig` VALUES('4','cfg_indexurl','网页主页链接','1','string','yjiang.com/');
+INSERT INTO `cake_sysconfig` VALUES('4','cfg_indexurl','网页主页链接','1','string','/');
 INSERT INTO `cake_sysconfig` VALUES('5','cfg_backup_dir','数据备份目录（在data目录内）','2','string','backupdata');
 INSERT INTO `cake_sysconfig` VALUES('6','cfg_indexname','主页链接名','1','string','主页');
-INSERT INTO `cake_sysconfig` VALUES('7','cfg_webname','网站名称','1','string','装修建材打折网');
+INSERT INTO `cake_sysconfig` VALUES('7','cfg_webname','网站名称','1','string','北京装修打折|北京建材打折|北京建材市场|北京装修设计|北京装修建材团购|北京装修建材打折网');
 INSERT INTO `cake_sysconfig` VALUES('8','cfg_adminemail','网站发信EMAIL','2','string','j582033@163.com');
 INSERT INTO `cake_sysconfig` VALUES('9','cfg_html_editor','Html编辑器（ckeditor,需要fck的用户可以去官网下载）','2','string','ckeditor');
 INSERT INTO `cake_sysconfig` VALUES('10','cfg_arcdir','文档HTML默认保存路径','1','string','/a');
@@ -103,8 +103,8 @@ INSERT INTO `cake_sysconfig` VALUES('706','cfg_upload_switch','删除文章文�
 INSERT INTO `cake_sysconfig` VALUES('708','cfg_rewrite','是否使用伪静态','2','bool','N');
 INSERT INTO `cake_sysconfig` VALUES('707','cfg_allsearch_limit','网站全局搜索时间限制','2','string','1');
 INSERT INTO `cake_sysconfig` VALUES('709','cfg_delete','文章回收站(是/否)开启','2','bool','Y');
-INSERT INTO `cake_sysconfig` VALUES('710','cfg_keywords','站点默认关键字','1','string','建材,装修材料');
-INSERT INTO `cake_sysconfig` VALUES('711','cfg_description','站点描述','1','bstring','装房子买建材看家具就来97打折网!');
+INSERT INTO `cake_sysconfig` VALUES('710','cfg_keywords','站点默认关键字','1','string','北京装修打折|北京建材打折|北京建材市场|北京装修设计|北京装修建材团购|北京装修建材打折网');
+INSERT INTO `cake_sysconfig` VALUES('711','cfg_description','站点描述','1','bstring','装房子、买建材、看家具、找设计，我就来装修建材打折网!');
 INSERT INTO `cake_sysconfig` VALUES('712','cfg_beian','网站备案号','1','string','');
 INSERT INTO `cake_sysconfig` VALUES('713','cfg_need_typeid2','是否启用副栏目','6','bool','Y');
 INSERT INTO `cake_sysconfig` VALUES('72','cfg_mb_pwdtype','前台密码验证类型：默认32 — 32位md5，可选：<br />l16 — 前16位， r16 — 后16位， m16 — 中间16位','4','string','32');
@@ -112,7 +112,7 @@ INSERT INTO `cake_sysconfig` VALUES('716','cfg_cache_type','id 文档ID，conten
 INSERT INTO `cake_sysconfig` VALUES('717','cfg_max_face','会员上传头像大小限制(单位：KB)','3','number','50');
 INSERT INTO `cake_sysconfig` VALUES('718','cfg_typedir_df','栏目网址使用目录名（不显示默认页，即是 /a/abc/ 形式）','2','bool','Y');
 INSERT INTO `cake_sysconfig` VALUES('719','cfg_make_andcat','发表文章后马上更新相关栏目','6','bool','N');
-INSERT INTO `cake_sysconfig` VALUES('720','cfg_make_prenext','发表文章后马上更新上下篇','6','bool','Y');
+INSERT INTO `cake_sysconfig` VALUES('720','cfg_make_prenext','发表文章后马上更新上下篇','6','bool','N');
 INSERT INTO `cake_sysconfig` VALUES('721','cfg_feedback_forbid','是否禁止所有评论(将包括禁止顶踩等)','5','bool','N');
 INSERT INTO `cake_sysconfig` VALUES('724','cfg_addon_domainbind','附件目录是否绑定为指定的二级域名','7','bool','N');
 INSERT INTO `cake_sysconfig` VALUES('725','cfg_addon_domain','附件目录的二级域名','7','string','');
@@ -151,5 +151,5 @@ INSERT INTO `cake_sysconfig` VALUES('758','cfg_memcache_mc_oth','附加memcache�
 INSERT INTO `cake_sysconfig` VALUES('759','cfg_cross_sectypeid','支持交叉栏目显示副栏目内容','7','bool','N');
 INSERT INTO `cake_sysconfig` VALUES('760','cfg_digg_update','顶踩缓存异步更新间隔（0为不缓存）','6','number','0');
 INSERT INTO `cake_sysconfig` VALUES('761','cfg_feedback_guest','是否允许匿名评论','5','bool','N');
-INSERT INTO `cake_sysconfig` VALUES('762','cfg_addr','公司地址','1','string','公司地址：北京市昌平区天通北苑');
-INSERT INTO `cake_sysconfig` VALUES('763','cfg_phone','联系电话','1','string','15801481572');
+INSERT INTO `cake_sysconfig` VALUES('762','cfg_addr','公司地址','1','string','公司地址：北京市昌平区天通苑北一区2号楼410室');
+INSERT INTO `cake_sysconfig` VALUES('763','cfg_phone','联系电话','1','string','010-61757483');

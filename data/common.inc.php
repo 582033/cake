@@ -7,5 +7,7 @@ $cfg_dbpwd = 'xuchunlong1983';
 $cfg_dbprefix = 'cake_';
 $cfg_db_language = 'utf8';
 
-
+if (file_exists('data/local.common.inc.php')){
+	include 'local.common.inc.php';
+}
 ?>
