@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="{dede:global.cfg_templets_skin/}/css/aiju_aj_index1.css" type="text/css" rel="stylesheet" />
+<link href="{dede:global.cfg_templets_skin/}/css/aiju_sc_index.css" type="text/css" rel="stylesheet" />
+<link href="{dede:global.cfg_templets_skin/}/css/aiju_sc_lb.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/jquery.treeview.css" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/artical_reset.css" type="text/css" rel="stylesheet" />
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.KinSlideshow-1.2.1.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/UrlUnit.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/simpleCart.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.treeview.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.lazyload.mini.js"></script>
+</head>
+<body>
+	<div class="main950">
+    	<!--头部开始-->
+		{dede:include filename="header.htm"/}
+        <!--头部结束-->
+        <!--头部结束-->
+        <!--内容开始-->
+        <div class="aiju_content">
+			{dede:include filename="lib_banner.htm"/}
+            <div class="daohang">
+                <div class="daohang_pic"><img src="http://img.sys.aiju.com//shop2011/ajsc.jpg" width="121" height="37" /></div>
+				<p class="daohang_text"> <span class="blue">{dede:field name='position'/}</span> </p>
+            </div>
+           <!--左侧开始-->
+<script language="javascript">
+	$(document).ready(function(){
+		$("#example").treeview();
+	});
+</script>
+<!--左侧开始-->
+<div class="sc_left_menu">
+  <!--菜单开始-->
+		{dede:include filename="lib_menu.htm"/}
+    <!--菜单结束-->
+</div>
+<!--左侧结束-->
+            <!--右侧开始-->
+            <div class="sc_right">
+				<div class="gongsi_tj">
+					<div class="gongsi_tj_top">
+						{dede:type}
+						<h4>[field:typename /]</h4>
+						{/dede:type}
+					</div>
+					<div class="gongsi_tj_right">
+						<div class="gongsi_tj_content">
+							{dede:field.body/}
+							{dede:field.content /}
+						</div>
+					</div>
+			   </div>
+                <!--翻页开始-->
+                  <div class="yhq_page"></div>
+                <!--翻页结束-->
+            <!--右侧结束-->
+
+        </div>
+		<!--内容结束-->
+		{dede:include filename="index_menu.htm"/}
+		{dede:include filename="footer.htm"/}
+    </div>
+    </div>
+</body>
+</html>
