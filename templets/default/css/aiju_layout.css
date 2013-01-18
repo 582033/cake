@@ -171,7 +171,7 @@ _line-height:26px;
 }
 .my_left_category .h3_cat{
 display:none;
-width:500px;
+width:338px;
 position:absolute;
 left:220px;
 margin-top:-26px;
@@ -180,11 +180,11 @@ cursor:auto;
 .my_left_category .shadow{
 position:inherit;
 background:url(shadow_04.gif) left top;
-width:500px;
+width:338px;
 }
 .my_left_category .shadow_border{
 position:inherit;
-width:549px;
+width:338px;
 border:2px solid #eb5c11; margin-top:1px;
 border-left-width:0px;
 background:url(../images/shadow_border.jpg) no-repeat 0px 25px;
@@ -236,7 +236,7 @@ float:left;
 	float:left;
 	background-color:#fff;
 	border-right:1px #999999 dotted;
-	min-height:220px;
+	min-height:25px;
 	_height:220px;
 }
 a.menu_link_ga:link,
